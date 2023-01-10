@@ -13,7 +13,7 @@ export default function Header() {
           >
             <span className="mr-1 -mt-1 text-primary"></span>
             <span>
-              <strong>CMVRO</strong>
+              <strong>CMV</strong>
             </span>
           </a>
         </div>
