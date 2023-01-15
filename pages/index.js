@@ -4,7 +4,7 @@ import Body from '../components/Body';
 import SideBar from '../components/SideBar';
 import { Transition } from '@headlessui/react';
 
-export default function Home({children}) {
+export default function Home({ children }) {
   const [showNav, setShowNav] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -48,7 +48,7 @@ export default function Home({children}) {
           showNav && !isMobile ? 'pl-56' : ''
         }`}
       >
-        <div className="px-4 md:px-16">{children}</div>
+        <div className="px-4 md:px-16"><Body/></div>
       </main>
     </div>
   );
