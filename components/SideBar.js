@@ -112,7 +112,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
               <strong>Bart di Muccio</strong>
             </div>
 
-            <small class="text-muted text-sm text-gray-300">
+            <small className="text-muted text-sm text-gray-300">
               CMVRO Administrator
             </small>
           </div>
@@ -122,64 +122,58 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <div className="pl-2 text-gray-200 mt-2">Operator</div>
         {OperatorItems.map((item) => {
           return (
-            <>
-              <Link href="/" keys="{item.name}">
-                <div
-                  className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
-                    router.pathname == '/'
-                      ? 'text-gray-400 hover:text-blue-100'
-                      : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
-                  }`}
-                >
-                  <div className="mr-2">{item.icon}</div>
-                  <div>
-                    <p>{item.name}</p>
-                  </div>
+            <Link href="/" key="{item.name}">
+              <div
+                className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'text-gray-400 hover:text-blue-100'
+                    : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+                }`}
+              >
+                <div className="mr-2">{item.icon}</div>
+                <div>
+                  <p>{item.name}</p>
                 </div>
-              </Link>
-            </>
+              </div>
+            </Link>
           );
         })}
         <div className="pl-2 text-gray-200 mt-2">Site Administrator</div>
         {AdministratorItems.map((item) => {
           return (
-            <>
-              <Link href="/" keys="{item.name}">
-                <div
-                  className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
-                    router.pathname == '/'
-                      ? 'text-gray-400 hover:text-blue-100'
-                      : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
-                  }`}
-                >
-                  <div className="mr-2">{item.icon}</div>
-                  <div>
-                    <p>{item.name}</p>
-                  </div>
+            <Link href="/" key="{item.name}">
+              <div
+                className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'text-gray-400 hover:text-blue-100'
+                    : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+                }`}
+              >
+                <div className="mr-2">{item.icon}</div>
+                <div>
+                  <p>{item.name}</p>
                 </div>
-              </Link>
-            </>
+              </div>
+            </Link>
           );
         })}
         <div className="pl-2 text-gray-200 mt-2">Central Administrator</div>
         {CadministratorItems.map((item) => {
           return (
-            <>
-              <Link href="/" keys="{item.name}">
-                <div
-                  className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
-                    router.pathname == '/'
-                      ? 'text-gray-400 hover:text-blue-100'
-                      : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
-                  }`}
-                >
-                  <div className="mr-2">{item.icon}</div>
-                  <div>
-                    <p>{item.name}</p>
-                  </div>
+            <Link href="/" key="{item.name}">
+              <div
+                className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
+                  router.pathname == '/'
+                    ? 'text-gray-400 hover:text-blue-100'
+                    : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+                }`}
+              >
+                <div className="mr-2">{item.icon}</div>
+                <div>
+                  <p>{item.name}</p>
                 </div>
-              </Link>
-            </>
+              </div>
+            </Link>
           );
         })}
       </div>
@@ -187,5 +181,6 @@ const SideBar = forwardRef(({ showNav }, ref) => {
   );
 });
 
+// eslint-disable-next-line react/display-name
 SideBar.displayname = 'SideBar';
 export default SideBar;
