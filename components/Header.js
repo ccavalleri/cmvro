@@ -4,12 +4,12 @@ import { useRef } from 'react';
 export default function Header() {
   const searchInputRef = useRef(null);
   return (
-    <header className="py-3 lg:py-0 bg-white shadow-md mdk-header--fixed">
+    <header className="py-3 lg:py-0 bg-gray-100 shadow-md mdk-header--fixed">
       <div className="lg:pl-4 px-8 flex flex-wrap items-center">
         <div className="items-center">
           <p className="flex items-center text-xl w-sidebar mr-4 hover:no-underline">
             <span className="mr-1 -mt-1 text-primary"></span>
-            <span className='font-mono text-4xl text-blue-600'>
+            <span className='text-4xl text-blue-800'>
               <strong>CMVRO</strong>
             </span>
           </p>
