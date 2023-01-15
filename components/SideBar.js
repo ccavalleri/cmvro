@@ -96,9 +96,9 @@ const SideBar = forwardRef(({ showNav }, ref) => {
       ref={ref}
       className="fixed w-64 h-full bg-white shadow-sm bg-slate-800"
     >
-      <div class="flex items-center sidebar-p-a border-b-2 bg-darker sidebar-account pt-4 pb-4 bg-slate-900">
-        <a href="#" class="flex items-center text-underline-0 text-body">
-          <div class="avatar w-12 h-22 mr-2">
+      <div className="flex items-center sidebar-p-a border-b-2 bg-darker sidebar-account pt-4 pb-4 bg-slate-900">
+        <a href="#" className="flex items-center text-underline-0 text-body">
+          <div className="avatar w-12 h-22 mr-2">
             <Image
               src="https://www.repstatic.it/content/nazionale/img/2015/12/02/104806208-2ae1f9f6-f588-4bd7-9e84-4dbcaaf02301.jpg?webp"
               alt="Avatar"
@@ -107,8 +107,8 @@ const SideBar = forwardRef(({ showNav }, ref) => {
               height={100}
             ></Image>
           </div>
-          <div class="leading-none text-white text-lg ml-2">
-            <div class="mb-1">
+          <div className="leading-none text-white text-lg ml-2">
+            <div className="mb-1">
               <strong>Bart di Muccio</strong>
             </div>
 
@@ -123,7 +123,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         {OperatorItems.map((item) => {
           return (
             <>
-              <Link href="/">
+              <Link href="/" keys="{item.name}">
                 <div
                   className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
                     router.pathname == '/'
@@ -144,7 +144,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         {AdministratorItems.map((item) => {
           return (
             <>
-              <Link href="/">
+              <Link href="/" keys="{item.name}">
                 <div
                   className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
                     router.pathname == '/'
@@ -165,7 +165,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         {CadministratorItems.map((item) => {
           return (
             <>
-              <Link href="/">
+              <Link href="/" keys="{item.name}">
                 <div
                   className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
                     router.pathname == '/'
