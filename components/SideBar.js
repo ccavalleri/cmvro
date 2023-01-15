@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   ClipboardIcon,
@@ -85,10 +86,8 @@ const CadministratorItems = [
     name: 'Vehicle Functions',
     url: '/admvehicle',
     icon: <UserIcon className="h-5 w-5" />,
-  }
-
+  },
 ];
-
 
 const SideBar = forwardRef(({ showNav }, ref) => {
   const router = useRouter();
@@ -100,11 +99,13 @@ const SideBar = forwardRef(({ showNav }, ref) => {
       <div class="flex items-center sidebar-p-a border-b-2 bg-darker sidebar-account pt-4 pb-4 bg-slate-900">
         <a href="#" class="flex items-center text-underline-0 text-body">
           <div class="avatar w-12 h-22 mr-2">
-            <img
+            <Image
               src="https://www.repstatic.it/content/nazionale/img/2015/12/02/104806208-2ae1f9f6-f588-4bd7-9e84-4dbcaaf02301.jpg?webp"
               alt="Avatar"
               className="h-22 rounded-full ml-1 bg-darker border-1"
-            />
+              width={100}
+              height={100}
+            ></Image>
           </div>
           <div class="leading-none text-white text-lg ml-2">
             <div class="mb-1">
