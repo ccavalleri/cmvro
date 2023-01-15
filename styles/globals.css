@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidebar-dark .sidebar-left {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(0,0,0,.15);
+}
+
+body {
+  @apply bg-gray-200
+}
