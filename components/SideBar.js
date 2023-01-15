@@ -182,5 +182,5 @@ const SideBar = forwardRef(({ showNav }, ref) => {
 });
 
 // eslint-disable-next-line react/display-name
-SideBar.displayname = 'SideBar';
+SideBar.displayName = 'SideBar';
 export default SideBar;
