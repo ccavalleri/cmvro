@@ -53,7 +53,7 @@ export default function MyDoughnut() {
     elements: {
       arc: {
         weight: 0.2,
-        borderWdth: 8,
+        borderWidth: 2,
       },
     },
     cutout: 5,
