@@ -124,7 +124,7 @@ export default function Body() {
           <Line data={data} width={400} height={120} options={options} />
         </div>
         <div className="rounded bg-white h-56 shadow-lg">
-          <Bar data={dataBar} width={400} options={optionsBar} />
+          <Bar data={dataBar} width={400} height={120} options={optionsBar} />
         </div>
         <div className="rounded bg-white h-56 shadow-lg"></div>
       </div>
