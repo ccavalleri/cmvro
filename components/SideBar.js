@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ClipboardIcon, PencilIcon, SearchIcon } from '@heroicons/react/solid';
 
-import {ChartPieIcon,
+import {
+  ChartPieIcon,
   ClipboardListIcon,
   BriefcaseIcon,
   TableIcon,
@@ -26,7 +27,8 @@ import {ChartPieIcon,
   UserIcon,
   LockOpenIcon,
   DocumentReportIcon,
-  TruckIcon,ChartSquareBarIcon
+  TruckIcon,
+  ChartSquareBarIcon,
 } from '@heroicons/react/outline';
 
 import { Bars4Icon } from '@heroicons/react/solid';
@@ -126,7 +128,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
   return (
     <div
       ref={ref}
-      className="fixed w-64 h-full bg-white shadow-sm bg-slate-800"
+      className="fixed w-64 h-full bg-white shadow-sm bg-slate-800 overflow-y-auto"
     >
       <div className="flex items-center sidebar-p-a border-b-2 bg-darker sidebar-account pt-4 pb-4 bg-slate-900">
         <a href="#" className="flex items-center text-underline-0 text-body">
