@@ -68,20 +68,28 @@ export default function Body() {
   return (
     <div>
       <p className="text-gray-700 text-3xl mb-16 font-bold">Dashboard</p>
-      <div className="grid lg:grid-cols-3 gap-5 mb-16">
-        <div className="rounded bg-white h-60 shadow-lg">
+      <div className="grid lg:grid-cols-5 gap-4 mb-16">
+        <div className="rounded-md bg-white h-60 shadow-lg">
           {' '}
           <Line data={data} width={400} height={120} options={options} />
         </div>
-        <div className="rounded bg-white h-60 shadow-lg">
+        <div className="rounded-md bg-white h-60 shadow-lg col-span-2">
           <MyBar />
         </div>
-        <div className="rounded bg-white h-68 shadow-lg">
+        <div className="rounded-md bg-white h-60 shadow-lg">
           {' '}
           <MyDoughnut />
         </div>
+        <div className="rounded-md bg-white h-60 shadow-lg">
+          {' '}
+          <MyDoughnut />
+        </div>
+        <div className="grid col-1 bg-white h-96 shadow-lg col-span-3 rounded-md">
+          {' '}
+        </div>
+        <div className="grid col-1 bg-white h-96 shadow-lg rounded-md"> </div>
+        <div className="grid col-1 bg-white h-96 shadow-lg rounded-md"> </div>
       </div>
-      <div className="grid col-1 bg-white h-96 shadow-lg"> </div>
     </div>
   );
 }

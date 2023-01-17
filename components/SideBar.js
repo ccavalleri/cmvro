@@ -1,78 +1,102 @@
 import { forwardRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ClipboardIcon, PencilIcon, SearchIcon } from '@heroicons/react/solid';
+
 import {
-  ClipboardIcon,
-  UserIcon,
-  PencilIcon,
-  SearchIcon,
-  CalendarIcon,
+  TableIcon,InboxIcon,
+  CogIcon,
+  AnnotationIcon,
+  ViewListIcon,
+  ChartBarIcon,
+  OfficeBuildingIcon,
+  UserAddIcon,
+  UserRemoveIcon,
+  IdentificationIcon,
+  DocumentDuplicateIcon,
   DocumentIcon,
-} from '@heroicons/react/solid';
+  CalendarIcon,
+  HomeIcon,
+  TagIcon,
+  CheckCircleIcon,
+  UsersIcon,
+  UserIcon,
+  LockOpenIcon,
+  DocumentReportIcon,
+  TruckIcon,
+} from '@heroicons/react/outline';
+
+import { Bars4Icon } from '@heroicons/react/solid';
+
 import { useRouter } from 'next/router';
 
 const OperatorItems = [
   {
     name: 'Waiting List',
     url: '/',
-    icon: <CalendarIcon className="h-5 w-5" />,
+    icon: <CalendarIcon className="h-7 w-7" />,
   },
   {
     name: 'Inprocessing',
     url: '/user',
-    icon: <UserIcon className="h-5 w-5" />,
+    icon: <UserAddIcon className="h-7 w-7" />,
   },
   {
     name: 'Personnel and Vehicles',
     url: '/credit',
-    icon: <ClipboardIcon className="h-5 w-5" />,
+    icon: <InboxIcon className="h-7 w-7" />,
   },
   {
     name: 'Outprocessing',
     url: '/credit',
-    icon: <PencilIcon className="h-5 w-5" />,
+    icon: <UserRemoveIcon className="h-7 w-7" />,
   },
   {
     name: 'Tag Tracker',
     url: '/credit',
-    icon: <SearchIcon className="h-5 w-5" />,
+    icon: <TagIcon className="h-7 w-7" />,
   },
   {
     name: 'Forms and Reports',
     url: '/credit',
-    icon: <DocumentIcon className="h-5 w-5" />,
+    icon: <DocumentDuplicateIcon className="h-7 w-7" />,
   },
   {
     name: 'Sponsor Audit',
     url: '/sponsoraudit',
-    icon: <UserIcon className="h-5 w-5" />,
+    icon: <UsersIcon className="h-7 w-7" />,
   },
 ];
 const AdministratorItems = [
   {
     name: 'Admin Log',
     url: '/',
-    icon: <CalendarIcon className="h-5 w-5" />,
+    icon: <ViewListIcon className="h-7 w-7" />,
+  },
+  {
+    name: 'Foundation Data',
+    url: '/user',
+    icon: <OfficeBuildingIcon className="h-7 w-7" />,
   },
   {
     name: 'Administrative Functions',
     url: '/user',
-    icon: <UserIcon className="h-5 w-5" />,
+    icon: <CogIcon className="h-7 w-7" />,
   },
   {
     name: 'Approver Functions',
     url: '/credit',
-    icon: <ClipboardIcon className="h-5 w-5" />,
+    icon: <LockOpenIcon className="h-7 w-7" />,
   },
   {
     name: 'Supervisor Reports',
     url: '/credit',
-    icon: <DocumentIcon className="h-5 w-5" />,
+    icon: <DocumentReportIcon className="h-7 w-7" />,
   },
   {
     name: 'Advanced Reports',
     url: '/credit',
-    icon: <DocumentIcon className="h-5 w-5" />,
+    icon: <AnnotationIcon className="h-7 w-7" />,
   },
 ];
 
@@ -80,12 +104,17 @@ const CadministratorItems = [
   {
     name: 'MOI Report',
     url: '/moi',
-    icon: <CalendarIcon className="h-5 w-5" />,
+    icon: <TableIcon className="h-7 w-7" />,
+  },
+  {
+    name: 'Site Manager',
+    url: '/admvehicle',
+    icon: <IdentificationIcon className="h-7 w-7" />,
   },
   {
     name: 'Vehicle Functions',
     url: '/admvehicle',
-    icon: <UserIcon className="h-5 w-5" />,
+    icon: <TruckIcon className="h-7 w-7" />,
   },
 ];
 
@@ -117,6 +146,25 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             </small>
           </div>
         </a>
+      </div>
+      <div className="flex flex-col">
+        <div className="pl-2 text-gray-200 mt-2">Main</div>
+        <Link href="/" key="{item.name}">
+          <div
+            className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
+              router.pathname == '/'
+                ? 'text-gray-400 hover:text-blue-100'
+                : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+            }`}
+          >
+            <div className="mr-2">
+              <ChartBarIcon Icon className="h-7 w-7" />
+            </div>
+            <div>
+              <p>Dashboard</p>
+            </div>
+          </div>
+        </Link>
       </div>
       <div className="flex flex-col">
         <div className="pl-2 text-gray-200 mt-2">Operator</div>

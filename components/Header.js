@@ -1,4 +1,5 @@
 import { SearchIcon, AdjustmentsIcon } from '@heroicons/react/solid';
+import { BellIcon, PrinterIcon, ChatIcon } from '@heroicons/react/outline';
 import { useRef } from 'react';
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
         <div className="items-center">
           <p className="flex items-center text-xl w-sidebar mr-4 hover:no-underline">
             <span className="mr-1 -mt-1 text-primary"></span>
-            <span className='text-4xl text-blue-800'>
+            <span className="text-4xl text-blue-800">
               <strong>CMVRO</strong>
             </span>
           </p>
@@ -43,7 +44,23 @@ export default function Header() {
                 className="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold"
                 id="options-menue1"
               >
-                Printing
+                <PrinterIcon className="h-6 ml-4 bl-2 bg-blue cursor-pointer" />
+              </p>
+            </li>
+            <li className="relative inline-block text-left">
+              <p
+                className="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold"
+                id="options-menue1"
+              >
+                <BellIcon className="h-6 bg-blue cursor-pointer" />
+              </p>
+            </li>
+            <li className="relative inline-block text-left">
+              <p
+                className="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold"
+                id="options-menue1"
+              >
+                <ChatIcon className="h-6 ml-4 bl-2 bg-blue cursor-pointer" />
               </p>
             </li>
             <li>

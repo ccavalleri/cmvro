@@ -56,7 +56,7 @@ export default function MyDoughnut() {
         borderWidth: 2,
       },
     },
-    cutout: 5,
+    cutout: 70,
   };
-  return <Doughnut data={data} width={50} height={50} options={options} />;
+  return <Doughnut data={data} options={options} />;
 }
