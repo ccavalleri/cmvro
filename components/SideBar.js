@@ -128,7 +128,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
   return (
     <div
       ref={ref}
-      className="fixed w-64 h-full bg-white shadow-sm bg-slate-800 overflow-y-auto"
+      className="fixed w-64 h-full bg-white shadow-sm bg-slate-800"
     >
       <div className="flex items-center sidebar-p-a border-b-2 bg-darker sidebar-account pt-4 pb-4 bg-slate-900">
         <a href="#" className="flex items-center text-underline-0 text-body">
