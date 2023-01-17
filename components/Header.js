@@ -1,5 +1,10 @@
-import { SearchIcon, AdjustmentsIcon } from '@heroicons/react/solid';
-import { BellIcon, PrinterIcon, ChatIcon } from '@heroicons/react/outline';
+import { SearchIcon } from '@heroicons/react/solid';
+import {
+  BellIcon,
+  PrinterIcon,
+  ChatIcon,
+  AdjustmentsIcon,
+} from '@heroicons/react/outline';
 import { useRef } from 'react';
 
 export default function Header() {
@@ -18,13 +23,13 @@ export default function Header() {
         <div className="flex-1 flex justify-between">
           <div className="relative text-gray-darker hidden lg:flex flex-grow">
             <div className="flex w-full mt-2 mb-2 mx-auto max-w-[90%] border border-gray-200 focus-within:shadow-lg px-2 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
-              <SearchIcon className="h-5 text-gray-500 mr-3" />
+              <SearchIcon className="h-6 text-gray-700 mr-3" />
               <input
                 ref={searchInputRef}
                 type="text"
                 className="flex-grow focus:outline-none"
               />
-              <AdjustmentsIcon className="h-5" />
+              <AdjustmentsIcon className="h-6 text-gray-700 ml-3 mr-3" />
             </div>
             <button
               type="submit"
