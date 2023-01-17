@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { ClipboardIcon, PencilIcon, SearchIcon } from '@heroicons/react/solid';
 
 import {
-  TableIcon,InboxIcon,
+  BriefcaseIcon,
+  TableIcon,
+  InboxIcon,
   CogIcon,
   AnnotationIcon,
   ViewListIcon,
@@ -81,7 +83,7 @@ const AdministratorItems = [
   {
     name: 'Administrative Functions',
     url: '/user',
-    icon: <CogIcon className="h-7 w-7" />,
+    icon: <BriefcaseIcon className="h-7 w-7" />,
   },
   {
     name: 'Approver Functions',
