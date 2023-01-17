@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ClipboardIcon, PencilIcon, SearchIcon } from '@heroicons/react/solid';
 
-import {
+import {ChartPieIcon,
+  ClipboardListIcon,
   BriefcaseIcon,
   TableIcon,
   InboxIcon,
@@ -25,7 +26,7 @@ import {
   UserIcon,
   LockOpenIcon,
   DocumentReportIcon,
-  TruckIcon,
+  TruckIcon,ChartSquareBarIcon
 } from '@heroicons/react/outline';
 
 import { Bars4Icon } from '@heroicons/react/solid';
@@ -73,7 +74,7 @@ const AdministratorItems = [
   {
     name: 'Admin Log',
     url: '/',
-    icon: <ViewListIcon className="h-7 w-7" />,
+    icon: <ChartSquareBarIcon className="h-7 w-7" />,
   },
   {
     name: 'Foundation Data',
@@ -98,7 +99,7 @@ const AdministratorItems = [
   {
     name: 'Advanced Reports',
     url: '/credit',
-    icon: <AnnotationIcon className="h-7 w-7" />,
+    icon: <ClipboardListIcon className="h-7 w-7" />,
   },
 ];
 
@@ -160,7 +161,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             }`}
           >
             <div className="mr-2">
-              <ChartBarIcon Icon className="h-7 w-7" />
+              <ChartPieIcon className="h-7 w-7" />
             </div>
             <div>
               <p>Dashboard</p>
