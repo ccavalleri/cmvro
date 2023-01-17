@@ -15,11 +15,12 @@ export default function Header() {
         <div className="items-center">
           <p className="flex items-center text-xl w-sidebar mr-4 hover:no-underline">
             <span className="mr-1 -mt-1 text-primary"></span>
-            <span className="text-4xl text-blue-800">
+            <span className="text-4xl text-blue-800 rounded-lg border px-2 py-1">
               <strong>CMVRO</strong>
             </span>
           </p>
         </div>
+
         <div className="flex-1 flex justify-between">
           <div className="relative text-gray-darker hidden lg:flex flex-grow">
             <div className="flex w-full mt-2 mb-2 mx-auto max-w-[90%] border border-gray-200 focus-within:shadow-lg px-2 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
@@ -69,12 +70,14 @@ export default function Header() {
               </p>
             </li>
             <li>
-              <p
-                className="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold"
-                id="options-menue"
-              >
-                Support Desk
-              </p>
+              <div class="flex space-x-2 justify-center">
+                <button
+                  type="button"
+                  className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-md leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Support Desk
+                </button>
+              </div>
             </li>
 
             <li>
