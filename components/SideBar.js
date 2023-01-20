@@ -28,7 +28,7 @@ import {
   LockOpenIcon,
   DocumentReportIcon,
   TruckIcon,
-  ChartSquareBarIcon,
+  ChartSquareBarIcon,UserCircleIcon
 } from '@heroicons/react/outline';
 
 import { Bars4Icon } from '@heroicons/react/solid';
@@ -153,7 +153,9 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </a>
       </div>
       <div className="flex flex-col">
-        <div className="pl-2 text-gray-200 mt-2">Main</div>
+        {' '}
+        
+        <div className="pl-2 text-gray-200 mt-2 flex">Viewer</div>
         <Link href="/" key="{item.name}">
           <div
             className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
