@@ -155,7 +155,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
       <div className="flex flex-col">
         {' '}
         
-        <div className="pl-2 text-gray-200 mt-2 flex">Viewer</div>
+        <div className="pl-2 text-gray-200 mt-2 flex bg-slate-700">Viewer</div>
         <Link href="/" key="{item.name}">
           <div
             className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
@@ -174,7 +174,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </Link>
       </div>
       <div className="flex flex-col">
-        <div className="pl-2 text-gray-200 mt-2">Operator</div>
+        <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Operator</div>
         {OperatorItems.map((item) => {
           return (
             <Link href="/" key="{item.name}">
@@ -193,7 +193,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             </Link>
           );
         })}
-        <div className="pl-2 text-gray-200 mt-2">Site Administrator</div>
+        <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Site Administrator</div>
         {AdministratorItems.map((item) => {
           return (
             <Link href="/" key="{item.name}">
@@ -212,7 +212,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             </Link>
           );
         })}
-        <div className="pl-2 text-gray-200 mt-2">Central Administrator</div>
+        <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Central Administrator</div>
         {CadministratorItems.map((item) => {
           return (
             <Link href="/" key="{item.name}">
