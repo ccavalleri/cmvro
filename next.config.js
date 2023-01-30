@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['www.repstatic.it'],
+    domains: ['www.repstatic.it', 'avatarfiles.alphacoders.com'],
   },
 };
 
