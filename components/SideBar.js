@@ -28,7 +28,8 @@ import {
   LockOpenIcon,
   DocumentReportIcon,
   TruckIcon,
-  ChartSquareBarIcon,UserCircleIcon
+  ChartSquareBarIcon,
+  UserCircleIcon,
 } from '@heroicons/react/outline';
 
 import { Bars4Icon } from '@heroicons/react/solid';
@@ -134,7 +135,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <a href="#" className="flex items-center text-underline-0 text-body">
           <div className="avatar w-12 h-22 mr-2">
             <Image
-              src="https://www.repstatic.it/content/nazionale/img/2015/12/02/104806208-2ae1f9f6-f588-4bd7-9e84-4dbcaaf02301.jpg?webp"
+              src="https://avatars.alphacoders.com/avatars/view/231694"
               alt="Avatar"
               className="h-22 rounded-full ml-1 bg-darker border-1"
               width={100}
@@ -143,7 +144,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
           </div>
           <div className="leading-none text-white text-lg ml-2">
             <div className="mb-1">
-              <strong>Bart di Muccio</strong>
+              <strong>Tony Stark</strong>
             </div>
 
             <small className="text-muted text-sm text-gray-300">
@@ -154,8 +155,9 @@ const SideBar = forwardRef(({ showNav }, ref) => {
       </div>
       <div className="flex flex-col">
         {' '}
-        
-        <div className="pl-2 text-gray-200 mt-2 flex bg-slate-700">Viewer</div>
+        <div className="pl-2 text-gray-200 mt-2 flex bg-slate-700 md-shadow">
+          Viewer
+        </div>
         <Link href="/" key="{item.name}">
           <div
             className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
@@ -193,7 +195,9 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             </Link>
           );
         })}
-        <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Site Administrator</div>
+        <div className="pl-2 text-gray-200 mt-2 bg-slate-700">
+          Site Administrator
+        </div>
         {AdministratorItems.map((item) => {
           return (
             <Link href="/" key="{item.name}">
@@ -212,7 +216,9 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             </Link>
           );
         })}
-        <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Central Administrator</div>
+        <div className="pl-2 text-gray-200 mt-2 bg-slate-700">
+          Central Administrator
+        </div>
         {CadministratorItems.map((item) => {
           return (
             <Link href="/" key="{item.name}">
