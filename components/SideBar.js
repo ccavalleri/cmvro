@@ -135,7 +135,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <a href="#" className="flex items-center text-underline-0 text-body">
           <div className="avatar w-12 h-22 mr-2">
             <Image
-              src="https://avatars.alphacoders.com/avatars/view/231694"
+              src="https://avatarfiles.alphacoders.com/231/231694.jpg"
               alt="Avatar"
               className="h-22 rounded-full ml-1 bg-darker border-1"
               width={100}
