@@ -2,6 +2,7 @@ import { forwardRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ClipboardIcon, PencilIcon, SearchIcon } from '@heroicons/react/solid';
+import { useRouter } from 'next/router';
 
 import {
   ChartPieIcon,
@@ -34,74 +35,72 @@ import {
 
 import { Bars4Icon } from '@heroicons/react/solid';
 
-import { useRouter } from 'next/router';
-
 const OperatorItems = [
   {
     name: 'Waiting List',
-    url: '/',
+    url: '/Operator/Waiting',
     icon: <CalendarIcon className="h-7 w-7" />,
   },
   {
     name: 'Inprocessing',
-    url: '/user',
+    url: '/Operator/Inprocessing',
     icon: <UserAddIcon className="h-7 w-7" />,
   },
   {
     name: 'Personnel and Vehicles',
-    url: '/credit',
+    url: '/Operator/PersonnelnVehicles',
     icon: <InboxIcon className="h-7 w-7" />,
   },
   {
     name: 'Outprocessing',
-    url: '/credit',
+    url: '/Operator/Outprocessing',
     icon: <UserRemoveIcon className="h-7 w-7" />,
   },
   {
     name: 'Tag Tracker',
-    url: '/credit',
+    url: '/Operator/Tagtracker',
     icon: <TagIcon className="h-7 w-7" />,
   },
   {
     name: 'Forms and Reports',
-    url: '/credit',
+    url: '/Operator/FormsnReports',
     icon: <DocumentDuplicateIcon className="h-7 w-7" />,
   },
   {
     name: 'Sponsor Audit',
-    url: '/sponsoraudit',
+    url: '/Operator/SponsorAudit',
     icon: <UsersIcon className="h-7 w-7" />,
   },
 ];
 const AdministratorItems = [
   {
     name: 'Admin Log',
-    url: '/',
+    url: '/Administrator/AdminLog',
     icon: <ChartSquareBarIcon className="h-7 w-7" />,
   },
   {
     name: 'Foundation Data',
-    url: '/user',
+    url: '/Administrator/FoundationData',
     icon: <OfficeBuildingIcon className="h-7 w-7" />,
   },
   {
     name: 'Administrative Functions',
-    url: '/user',
+    url: '/Administrator/AdminFunc',
     icon: <BriefcaseIcon className="h-7 w-7" />,
   },
   {
     name: 'Approver Functions',
-    url: '/credit',
+    url: '/Administrator/ApproverFunc',
     icon: <LockOpenIcon className="h-7 w-7" />,
   },
   {
     name: 'Supervisor Reports',
-    url: '/credit',
+    url: '/Administrator/SupervReports',
     icon: <DocumentReportIcon className="h-7 w-7" />,
   },
   {
     name: 'Advanced Reports',
-    url: '/credit',
+    url: '/Administrator/AdvancedReports',
     icon: <ClipboardListIcon className="h-7 w-7" />,
   },
 ];
@@ -109,17 +108,17 @@ const AdministratorItems = [
 const CadministratorItems = [
   {
     name: 'MOI Report',
-    url: '/moi',
+    url: '/CentralAdministrator/MOIreports',
     icon: <TableIcon className="h-7 w-7" />,
   },
   {
     name: 'Site Manager',
-    url: '/admvehicle',
+    url: '/CentralAdministrator/SiteManager',
     icon: <IdentificationIcon className="h-7 w-7" />,
   },
   {
     name: 'Vehicle Functions',
-    url: '/admvehicle',
+    url: '/CentralAdministrator/VehicleFunctions',
     icon: <TruckIcon className="h-7 w-7" />,
   },
 ];
@@ -158,12 +157,12 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <div className="pl-2 text-gray-200 mt-2 flex bg-slate-700 md-shadow">
           Viewer
         </div>
-        <Link href="/" key="{item.name}">
+        <Link href="/Viewer/Dashboard" key="{item.name}">
           <div
             className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
               router.pathname == '/'
                 ? 'text-gray-400 hover:text-blue-100'
-                : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+                : 'text-gray-400 hover:bg-gray-100 hover:text-gray-500'
             }`}
           >
             <div className="mr-2">
@@ -179,12 +178,12 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Operator</div>
         {OperatorItems.map((item) => {
           return (
-            <Link href="/" key="{item.name}">
+            <Link href={item.url} key="{item.name}">
               <div
                 className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
-                  router.pathname == '/'
+                  router.pathname == item.url
                     ? 'text-gray-400 hover:text-blue-100'
-                    : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+                    : 'text-gray-400 hover:bg-gray-100 hover:text-gray-500'
                 }`}
               >
                 <div className="mr-2">{item.icon}</div>
@@ -200,12 +199,12 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </div>
         {AdministratorItems.map((item) => {
           return (
-            <Link href="/" key="{item.name}">
+            <Link href={item.url} key="{item.name}">
               <div
                 className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
-                  router.pathname == '/'
+                  router.pathname == item.url
                     ? 'text-gray-400 hover:text-blue-100'
-                    : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+                    : 'text-gray-400 hover:bg-gray-100 hover:text-gray-500'
                 }`}
               >
                 <div className="mr-2">{item.icon}</div>
@@ -221,12 +220,12 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </div>
         {CadministratorItems.map((item) => {
           return (
-            <Link href="/" key="{item.name}">
+            <Link href={item.url} key="{item.name}">
               <div
                 className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
-                  router.pathname == '/'
+                  router.pathname == item.url
                     ? 'text-gray-400 hover:text-blue-100'
-                    : 'text-gray-400 hover:bg-orange-100 hover:text-orange-500'
+                    : 'text-gray-400 hover:bg-gray-100 hover:text-gray-500'
                 }`}
               >
                 <div className="mr-2">{item.icon}</div>

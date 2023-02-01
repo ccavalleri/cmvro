@@ -10,7 +10,7 @@ import { useRef } from 'react';
 export default function Header() {
   const searchInputRef = useRef(null);
   return (
-    <header className="py-3 lg:py-0 bg-gray-200 shadow-md mdk-header--fixed">
+    <header className="py-3 lg:py-0 bg-gray-200 shadow-md mdk-header--fixed sticky">
       <div className="lg:pl-4 px-8 flex flex-wrap items-center">
         <div className="items-center">
           <p className="flex items-center text-xl w-sidebar mr-4 hover:no-underline">
@@ -23,7 +23,7 @@ export default function Header() {
 
         <div className="flex-1 flex justify-between">
           <div className="relative text-gray-darker hidden lg:flex flex-grow">
-            <div className="flex w-full mt-2 mb-2 mx-auto max-w-[90%] border border-gray-200 focus-within:shadow-lg px-2 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
+            <div className="flex w-full mt-2 mb-2 mx-auto max-w-[90%] border border-gray-300 focus-within:shadow-lg px-2 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
               <SearchIcon className="h-6 text-gray-700 mr-3" />
               <input
                 ref={searchInputRef}
