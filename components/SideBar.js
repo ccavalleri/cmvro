@@ -143,7 +143,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
           </div>
           <div className="leading-none text-white text-lg ml-2">
             <div className="mb-1">
-              <strong>Tony Stark</strong>
+              <strong className='hover:bg-sky-700'>Tony Stark</strong>
             </div>
 
             <small className="text-muted text-sm text-gray-300">
