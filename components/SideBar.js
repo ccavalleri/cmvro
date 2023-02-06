@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ClipboardIcon, PencilIcon, SearchIcon } from '@heroicons/react/solid';
@@ -125,6 +125,8 @@ const CadministratorItems = [
 
 const SideBar = forwardRef(({ showNav }, ref) => {
   const router = useRouter();
+  const [isShown, setIsShown] = useState(false);
+
   return (
     <div
       ref={ref}
@@ -142,10 +144,18 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             ></Image>
           </div>
           <div className="leading-none text-white text-lg ml-2">
+            <Link href='/Viewer/Profile'>
             <div className="mb-1">
-              <strong className="hover:bg-sky-700">Tony Stark</strong>
+              <strong
+                className="hover:bg-sky-700"
+                onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}
+              >
+                Tony Stark
+              </strong>
+              {isShown && <span className="text-sm text-yellow-200 ml-2">click to edit</span>}
             </div>
-
+            </Link>
             <small className="text-muted text-sm text-gray-300">
               CMVRO Administrator
             </small>
