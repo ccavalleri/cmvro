@@ -7,8 +7,8 @@ export default function Inprocessing() {
     return (
       <div className="px-4 md:px-16 border">
       errorMessage:"",  
-      maxLength: 25,<
-      maxLength: 25,label>Username</
+      maxlength: 25,<
+      maxlength: 25,label>Username</
       label>
         <input placeholder="test" type="text" />
       </div>
@@ -26,6 +26,7 @@ export default function Inprocessing() {
     installation: '',
     rank: '',
     rating: '',
+    formError: 0,
   });
   const inputs = [
     {
@@ -33,25 +34,29 @@ export default function Inprocessing() {
       name: 'lastName',
       placeholder: 'Last Name',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Last Name',
       type: 'text',
+      required: true,
     },
     {
       id: 2,
       name: 'firstName',
       placeholder: 'First Name',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'First Name',
       type: 'text',
+      required: true,
     },
     {
       id: 3,
       name: 'dodid',
       placeholder: 'DODID',
       errorMessage: 'It should be 10 digits',
-      maxLength: 10,
+      maxlength: 10,
+      required: true,
+      pattern: '[0-9]{10}',
       label: 'DODID',
       type: 'text',
     },
@@ -60,72 +65,94 @@ export default function Inprocessing() {
       name: 'dob',
       placeholder: 'Birthday',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Birthday',
       type: 'date',
+      required: true,
     },
     {
       id: 5,
       name: 'nationality',
       placeholder: 'Nationality',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Nationality',
       type: 'text',
+      required: true,
     },
     {
       id: 6,
       name: 'service',
       placeholder: 'Service',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Service',
       type: 'text',
+      required: true,
     },
     {
       id: 7,
       name: 'command',
       placeholder: 'Command',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Command',
       type: 'text',
+      required: true,
     },
     {
       id: 8,
       name: 'installation',
       placeholder: 'Installation',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Installation',
       type: 'text',
+      required: true,
     },
     {
       id: 9,
       name: 'rank',
       placeholder: 'Rank',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Rank',
       type: 'text',
+      required: true,
     },
     {
       id: 10,
       name: 'rating',
       placeholder: 'Rating',
       errorMessage: '',
-      maxLength: 25,
+      maxlength: 25,
       label: 'Rating',
       type: 'text',
+      required: true,
     },
   ];
 
   const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
+    setValues({ ...values, [e.target.id]: e.target.value });
   };
-  const handleSubmit = (e) => {};
-  console.log(values);
 
+  const handleSubmit = (e) => {};
+
+  {
+    /*const onBlur = (e) => {
+    console.log('>>> onBlur function....');
+
+    if (e.target.validity.patternMismatch) {
+      inputs[2].showError = 1;
+      // inputs[parseInt(e.target.id) - 1].errorMessage = true;
+      console.log(inputs);
+      setValues({ ...values, formError: 1 });
+    } else setValues({ ...values, formError: 0 });
+  };
+*/
+  }
+
+  console.log(values);
   return (
     <div className="px-4 md:px-16">
       <p className="text-gray-700 text-3xl mb-4 font-bold">In processing</p>

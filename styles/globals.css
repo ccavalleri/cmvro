@@ -11,3 +11,11 @@
 body {
   @apply bg-gray-200
 }
+
+input:invalid[focused="true"] {
+  border-color: #DD2C00;
+}
+
+input:invalid[focused="true"] ~ p {
+ display: block;
+}

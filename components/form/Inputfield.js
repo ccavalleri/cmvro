@@ -1,12 +1,22 @@
+import { useState } from "react";
 export default function Inputfield({
   name,
   label,
   errorMessage,
   type,
   placeholder,
-  maxLength,
+  maxlength,
+  required,
+  pattern,
   onChange,
+  onBlur,
 }) {
+
+  const [showError,setShowError]=useState(false);
+  const handleShowError=(e) => {
+    setShowError(true);
+  }
+
   return (
     <div className="ml-2 mt-1">
       <label className="block text-gray-700 text-xl font-bold">{label}</label>
@@ -16,9 +26,14 @@ export default function Inputfield({
         type={type}
         placeholder={placeholder}
         onChange={onChange}
-        maxlength={maxLength}
+        maxLength={maxlength}
+        pattern={pattern}
+        onBlur={handleShowError}
+        required
+        focused={showError.toString()}
       />
-      <p class="text-red-500 text-xs mt-1 ml-2">{errorMessage}</p>
+
+      <p className="text-red-500 text-xs mt-1 ml-2 hidden">{errorMessage}</p>
     </div>
   );
 }

@@ -143,7 +143,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
           </div>
           <div className="leading-none text-white text-lg ml-2">
             <div className="mb-1">
-              <strong className='hover:bg-sky-700'>Tony Stark</strong>
+              <strong className="hover:bg-sky-700">Tony Stark</strong>
             </div>
 
             <small className="text-muted text-sm text-gray-300">
@@ -157,7 +157,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <div className="pl-2 text-gray-200 mt-2 flex bg-slate-700 md-shadow">
           Viewer
         </div>
-        <Link href="/Viewer/Dashboard" key="{item.name}">
+        <Link href="/Viewer/Dashboard">
           <div
             className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
               router.pathname == '/'
@@ -178,7 +178,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Operator</div>
         {OperatorItems.map((item) => {
           return (
-            <Link href={item.url} key="{item.name}">
+            <Link href={item.url} key={item.name}>
               <div
                 className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
                   router.pathname == item.url
@@ -199,7 +199,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </div>
         {AdministratorItems.map((item) => {
           return (
-            <Link href={item.url} key="{item.name}">
+            <Link href={item.url} key={item.name}>
               <div
                 className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
                   router.pathname == item.url
@@ -220,7 +220,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         </div>
         {CadministratorItems.map((item) => {
           return (
-            <Link href={item.url} key="{item.name}">
+            <Link href={item.url} key={item.name}>
               <div
                 className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
                   router.pathname == item.url
