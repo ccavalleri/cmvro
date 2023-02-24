@@ -144,20 +144,24 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             ></Image>
           </div>
           <div className="leading-none text-white text-lg ml-2">
-            <Link href='/Viewer/Profile'>
-            <div className="mb-1">
-              <strong
-                className="hover:bg-sky-700"
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}
-              >
-                Tony Stark
-              </strong>
-              {isShown && <span className="text-sm text-yellow-200 ml-2">click to edit</span>}
-            </div>
+            <Link href="/Viewer/Profile">
+              <div className="mb-1">
+                <strong
+                  className="hover:bg-sky-700"
+                  onMouseEnter={() => setIsShown(true)}
+                  onMouseLeave={() => setIsShown(false)}
+                >
+                  Tony Stark
+                </strong>
+                {isShown && (
+                  <span className="text-sm text-yellow-200 ml-2">
+                    click to edit
+                  </span>
+                )}
+              </div>
             </Link>
             <small className="text-muted text-sm text-gray-300">
-              CMVRO Administrator
+              Central Administrator
             </small>
           </div>
         </a>
