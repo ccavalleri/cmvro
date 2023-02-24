@@ -85,7 +85,7 @@ export default function Header() {
                 className="flex items-center lg:p-4 py-3 px-0 block hover:text-blue-600 font-semibold"
                 id="options-menue2"
               >
-                Sign in
+                Log Out
               </p>
             </li>
           </ul>

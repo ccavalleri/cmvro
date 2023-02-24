@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 export default function Inputfield({
   name,
   label,
@@ -11,17 +11,18 @@ export default function Inputfield({
   onChange,
   onBlur,
 }) {
-
-  const [showError,setShowError]=useState(false);
-  const handleShowError=(e) => {
+  const [showError, setShowError] = useState(false);
+  const handleShowError = (e) => {
     setShowError(true);
-  }
+  };
 
   return (
-    <div className="ml-2 mt-1">
-      <label className="block text-gray-700 text-xl font-bold">{label}</label>
+    <div className="mx-1 mt-1">
+      <label className="block text-gray-700 xl:text-xl xl:font-bold md:text-sm">
+        {label}
+      </label>
       <input
-        className="shadow appearance-none border rounded w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id={name}
         type={type}
         placeholder={placeholder}
