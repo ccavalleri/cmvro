@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Cupra from '../../public/cupra-formentor.png';
 import Gla from '../../public/gla.jpeg';
-import DS4 from '../../public/DS4.jpeg';
+import DS4 from '../../public/ds4.jpeg';
 import Link from 'next/link';
 
 export default function VehicleList({}) {
