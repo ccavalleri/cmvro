@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Avatar from '../../public/avatar.jpg';
 import Cupra from '../../public/cupra-formentor.png';
 import Gla from '../../public/gla.jpeg';
-import DS4 from '../../public/DS4.jpeg';
+import DS4 from '../../public/ds4.jpeg';
 import Inputfield from '../../components/form/Inputfield';
 import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
 import InputfieldIcon from '../../components/form/InputfieldIcon';
