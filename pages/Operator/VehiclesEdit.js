@@ -68,7 +68,7 @@ export default function VehiclesEdit() {
                     AFI N-23456 | EP178GN
                   </p>
                   <p className="flex justify-center font-bold text-gray-700 dark:text-gray-400">
-                    <span className="text-gray-500 mr-1">PRD: </span> 02/22/2024
+                    <span className="text-gray-500 mr-1">EXP: </span> 02/22/2024
                   </p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function VehiclesEdit() {
                     AFI 2N-26333 | EC728TT
                   </p>
                   <p className="flex justify-center font-bold text-gray-700 dark:text-gray-400">
-                    <span className="text-gray-500 mr-1">PRD: </span> 10/22/2023
+                    <span className="text-gray-500 mr-1">EXP: </span> 10/22/2023
                   </p>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function VehiclesEdit() {
                     AFI 2N-11223 | EX128XX
                   </p>
                   <p className="flex justify-center font-bold text-gray-700 dark:text-gray-400">
-                    <span className="text-gray-500 mr-1">PRD: </span> 02/08/2023
+                    <span className="text-gray-500 mr-1">EXP: </span> 02/08/2023
                   </p>
                 </div>
               </div>
