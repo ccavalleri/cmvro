@@ -206,7 +206,7 @@ export default function DriverLicense() {
                       placeholder="ex. "
                       errorMessage=""
                       maxlength="20"
-                      label="Suspension Justification"
+                      label="US License Exp"
                       type="date"
                       required="true"
                       value=""
@@ -290,18 +290,18 @@ export default function DriverLicense() {
                   </div>
                 </div>
                 <div className="col-span-3 mr-3">
-                    <Inputfield
-                      key="suspJustification"
-                      name="suspJustification"
-                      placeholder="ex. The sponsor failed the alcohol test on 12/03/2022"
-                      errorMessage=""
-                      maxlength="200"
-                      label="Suspension Justification"
-                      type="text"
-                      required="true"
-                      value=""
-                    />
-                  </div>
+                  <Inputfield
+                    key="suspJustification"
+                    name="suspJustification"
+                    placeholder="ex. The sponsor failed the alcohol test on 12/03/2022"
+                    errorMessage=""
+                    maxlength="200"
+                    label="Suspension Justification"
+                    type="text"
+                    required="true"
+                    value=""
+                  />
+                </div>
               </div>
             </div>
           </div>
