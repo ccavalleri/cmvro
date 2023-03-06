@@ -3,9 +3,16 @@ import Image from 'next/image';
 import Avatar from '../../public/avatar.jpg';
 import Inputfield from '../../components/form/Inputfield';
 import VehicleList from '../../components/ui/VehicleList';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function PersonnelnVehicles() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = (event) => {
+    setIsActive((current) => !current);
+  };
+
   return (
     <div className="px-4 md:px-16">
       <div className="grid grid-cols-2">
@@ -327,7 +334,7 @@ export default function PersonnelnVehicles() {
                       placeholder="Parking Spots"
                       errorMessage=""
                       maxlength="50"
-                      label="Reserved Parking Spots"
+                      label="NEX Parking Spots"
                       type="text"
                       required="true"
                       value=""
@@ -351,7 +358,12 @@ export default function PersonnelnVehicles() {
                     <li className="mr-2">
                       <a
                         href="#"
-                        className="font-bold inline-flex p-2  border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+                        onClick={handleClick}
+                        className={
+                          isActive
+                            ? ''
+                            : 'font-bold inline-flex p-2  border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group'
+                        }
                         aria-current="page"
                       >
                         Family Members

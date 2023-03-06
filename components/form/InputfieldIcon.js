@@ -20,7 +20,7 @@ export default function InputfieldIcon({
   };
 
   return (
-    <div className="ml-2 mt-1">
+    <div className="ml-1 mt-1">
       <label className="block text-gray-700 xl:text-xl md:text-sm font-bold">
         {label}
       </label>
