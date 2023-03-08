@@ -1,13 +1,13 @@
 import Body from '../../components/Body';
 import Image from 'next/image';
-import Avatar from '../../public/avatar.jpg';
-import NatoLogo from '../../public/us-nato-logo.png';
 import Webcam from 'react-webcam';
+import Avatar from '../../public/avatar.jpg';
 import { useState } from 'react';
 import Inputfield from '../../components/form/Inputfield';
 import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
 import InputfieldIcon from '../../components/form/InputfieldIcon';
 import RadioBox from '../../components/form/RadioBox';
+import DriverLicenseCard from '../../components/ui/DriverLIcenseCard';
 
 export default function DriverLicense() {
   const [ImageExist, setImageExist] = useState(true);
@@ -306,94 +306,19 @@ export default function DriverLicense() {
                   </div>
                 </div>
               </div>
-              <div className="col-span-4 border border-gray-200 rounded-lg shadow py-1 px-2 mr-3 h-80 text-gray-700 md:text-md text-white font-bold ml-2 mt-2">
-                <div className="grid grid-cols-2">
-                  <div className="border border-gray-300 rounded-lg shadow-lg h-[270px] w-[500px] mx-9 my-9 bg-slate-200">
-                    <div className="grid grid-cols-3">
-                      <div>
-                        {' '}
-                        <Image
-                          src={NatoLogo}
-                          alt="Nato Logo"
-                          className="mx-1 my-1"
-                        />
-                      </div>
-                      <div className="col-span-2">
-                        <p className="text-blue-700 text-sm ml-2 mt-1">
-                          Allied Forces Italy (AFI) Driver License
-                        </p>
-                        <p className="text-blue-700 text-sm ml-2 mt-1">
-                          Patente di guida Forze Alleate Italia (AFI)
-                        </p>
-                      </div>
-
-                      <div>
-                        {' '}
-                        <Image
-                          src={Avatar}
-                          alt="Avatar"
-                          className="mx-1 my-1"
-                        />
-                      </div>
-                      <div className="col-span-2">
-                        <div className="grid grid-cols-3 ml-1">
-                          <div>
-                            <span className="text-blue-700">1. </span>
-                            <span className="text-slate-900 ml-1 uppercase">
-                              Fox
-                            </span>
-                          </div>
-                          <div className="col-span-2">
-                            <span className="text-blue-700 ml-1">2. </span>
-                            <span className="text-slate-900 ml-1 uppercase">
-                              Michael J.
-                            </span>
-                          </div>
-                          <div className="grid grid-cols-2">
-                            <div className="mt-1">
-                              <span className="text-blue-700">a. </span>
-                              <span className="text-slate-900 ml-1 uppercase text-sm">
-                                NO
-                              </span>
-                            </div>
-                            <div className="ml-1 mt-1">
-                              <span className="text-blue-700">b. </span>
-                              <span className="text-slate-900 uppercase">
-                                181
-                              </span>
-                            </div>
-                          </div>
-                          <div className="col-span-2 mt-1">
-                            <span className="text-blue-700 ml-1">3. </span>
-                            <span className="text-slate-900 ml-1 uppercase text-sm">
-                              03/20/1991 PASADENA - CA
-                            </span>
-                          </div>
-                          <div className="mt-1">
-                            <span className="text-blue-700">c. </span>
-                            <span className="text-slate-900 uppercase text-sm ml-1">
-                              80
-                            </span>
-                          </div>
-                          <div className="mt-1">
-                            <span className="text-blue-700 ml-1">d. </span>
-                            <span className="text-slate-900 uppercase text-sm">
-                              AZZURRI
-                            </span>
-                          </div>
-                          <div className="mt-1">
-                            <span className="text-blue-700">e. </span>
-                            <span className="text-slate-900 uppercase text-sm">
-                              CASTANI
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="border border-gray-200 rounded-lg shadow h-60 w-96 mx-9 my-9"></div>
+              <DriverLicenseCard />
+              <div className="border border-gray-200 rounded-lg shadow py-1 mr-3 h-80 text-gray-700 md:text-md text-white font-bold mr-3 mt-2">
+                <div className="border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
+                  Driver License Points
                 </div>
-              </div>
+                <div className="flex justify-center">
+                  <div className="mt-4 border border-gray-200 rounded w-56 h-40 bg-slate-100 grid grid-cols-1">
+                    <div className='border border-gray-200 rounded h-7 w-full mt-2 text-blue-500 text-center'>Current:</div>
+                    <div className='text-7xl text-blue-500 mt-6 w-full h-24 shadow font-bold text-center'>20</div>
+                  </div>
+                </div>
+                <div className="mt-1"></div>
+              </div>{' '}
               <div className="border border-gray-200 rounded-lg shadow py-1 mr-3 h-80 text-gray-700 md:text-md text-white font-bold mr-3 mt-2">
                 <div className="border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
                   Moto Safety Course
