@@ -307,7 +307,7 @@ export default function DriverLicense() {
                 </div>
               </div>
               <DriverLicenseCard />
-              <div className="border border-gray-200 rounded-lg shadow py-1 mr-3 h-80 text-gray-700 md:text-md text-white font-bold mr-3 mt-2">
+              <div className="border border-gray-200 rounded-lg shadow py-1 mr-3 h-84 text-gray-700 md:text-md text-white font-bold mr-3 mt-2">
                 <div className="border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
                   Driver License Points
                 </div>
@@ -316,14 +316,22 @@ export default function DriverLicense() {
                     <div className="border border-gray-200 rounded h-7 w-full mt-2 text-blue-500 text-center">
                       Current:
                     </div>
-                    <div className="text-7xl text-blue-500 mt-6 w-full h-24 shadow font-bold text-center">
+                    <div className="text-8xl text-blue-500 mt-1 w-full h-24 font-bold text-center">
                       20
                     </div>
                   </div>
                 </div>
-                <div className="mt-1"></div>
+                <hr className="h-px mt-2 bg-gray-200 border-0 dark:bg-gray-700" />
+                <div className="flex justify-center">
+                  <button
+                    type="button"
+                    className="mt-1 font-bold focus:outline-none text-white bg-blue-600 hover:bg-red-800 focus:ring-4 mt-5 focus:ring-red-300 font-medium rounded-lg text-lg px-4 py-1 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >
+                    Update
+                  </button>
+                </div>
               </div>{' '}
-              <div className="border border-gray-200 rounded-lg shadow py-1 mr-3 h-80 text-gray-700 md:text-md text-white font-bold mr-3 mt-2">
+              <div className="border border-gray-200 rounded-lg shadow py-1 mr-3 h-84 text-gray-700 md:text-md text-white font-bold mr-3 mt-2">
                 <div className="border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
                   Moto Safety Course
                 </div>

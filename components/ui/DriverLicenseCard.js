@@ -4,9 +4,12 @@ import Avatar from '../../public/avatar.jpg';
 
 export default function DriverLicenseCard({}) {
   return (
-    <div className="col-span-3 border border-gray-200 rounded-lg shadow py-1 px-2 mr-3 h-80 text-gray-700 md:text-md text-white font-bold ml-2 mt-2">
+    <div className="col-span-3 border border-gray-200 rounded-lg shadow py-1 px-2 mr-3 h-84 text-gray-700 md:text-md text-white font-bold ml-2 mt-2">
+       <div className="col-span-3 border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
+                  Driver License Preview
+                </div>
       <div className="grid grid-cols-2">
-        <div className="border border-gray-300 rounded-lg shadow-lg h-[270px] w-[500px] mx-9 my-9 bg-slate-200">
+        <div className="border border-gray-300 rounded-lg shadow-lg h-[270px] w-[500px] mx-9 my-2 bg-slate-200">
           <div className="grid grid-cols-3">
             <div>
               {' '}
@@ -79,7 +82,7 @@ export default function DriverLicenseCard({}) {
             </div>
           </div>
         </div>
-        <div className="border border-gray-300 rounded-lg shadow-lg h-[270px] w-[500px] mx-9 my-9 bg-slate-200">
+        <div className="border border-gray-300 rounded-lg shadow-lg h-[270px] w-[500px] mx-9 my-2 bg-slate-200">
           <div className="grid grid-cols-3">
             <div>
               {' '}
