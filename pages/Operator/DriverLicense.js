@@ -7,7 +7,7 @@ import Inputfield from '../../components/form/Inputfield';
 import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
 import InputfieldIcon from '../../components/form/InputfieldIcon';
 import RadioBox from '../../components/form/RadioBox';
-import DriverLicenseCard from '../../components/ui/DriverLIcenseCard';
+import DriverLicenseCard from '../../components/ui/DriverLicenseCard';
 
 export default function DriverLicense() {
   const [ImageExist, setImageExist] = useState(true);
@@ -313,8 +313,12 @@ export default function DriverLicense() {
                 </div>
                 <div className="flex justify-center">
                   <div className="mt-4 border border-gray-200 rounded w-56 h-40 bg-slate-100 grid grid-cols-1">
-                    <div className='border border-gray-200 rounded h-7 w-full mt-2 text-blue-500 text-center'>Current:</div>
-                    <div className='text-7xl text-blue-500 mt-6 w-full h-24 shadow font-bold text-center'>20</div>
+                    <div className="border border-gray-200 rounded h-7 w-full mt-2 text-blue-500 text-center">
+                      Current:
+                    </div>
+                    <div className="text-7xl text-blue-500 mt-6 w-full h-24 shadow font-bold text-center">
+                      20
+                    </div>
                   </div>
                 </div>
                 <div className="mt-1"></div>
