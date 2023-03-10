@@ -629,7 +629,62 @@ export default function VehiclesEdit() {
                       id="profile"
                       role="tabpanel"
                       aria-labelledby="profile-tab"
-                    ></div>
+                    >
+                      <div className="grid grid-cols-4">
+                        <div className="">
+                          <Inputfield
+                            key="entryMethod"
+                            name="entryMethod"
+                            placeholder="ex. Geiko"
+                            errorMessage=""
+                            maxlength="50"
+                            label="Company"
+                            type="text"
+                            required="true"
+                            value=""
+                          />
+                        </div>
+                        <div className="">
+                          <Inputfield
+                            key="policyNumber"
+                            name="policyNumber"
+                            placeholder="ex. 12345"
+                            errorMessage=""
+                            maxlength="50"
+                            label="Policy Number"
+                            type="text"
+                            required="true"
+                            value=""
+                          />
+                        </div>
+                        <div className="">
+                          <Inputfield
+                            key="policySD"
+                            name="policySD"
+                            placeholder="ex. "
+                            errorMessage=""
+                            maxlength="50"
+                            label="Policy Start Date"
+                            type="date"
+                            required="true"
+                            value=""
+                          />
+                        </div>
+                        <div className="">
+                          <Inputfield
+                            key="policyED"
+                            name="policyED"
+                            placeholder="ex. "
+                            errorMessage=""
+                            maxlength="50"
+                            label="Policy End gitDate"
+                            type="date"
+                            required="true"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
                     <div
                       className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
                       id="dashboard"
