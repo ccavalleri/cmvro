@@ -677,7 +677,7 @@ export default function VehiclesEdit() {
                             placeholder="ex. "
                             errorMessage=""
                             maxlength="50"
-                            label="Policy End gitDate"
+                            label="Policy End Date"
                             type="date"
                             required="true"
                             value=""
@@ -723,13 +723,26 @@ export default function VehiclesEdit() {
               </div>
             </div>
             <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-            <div className="flex justify-end col-span-4">
-              <button
-                type="button"
-                className="mt-1 font-bold focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-              >
-                SAVE
-              </button>
+            <div className="grid grid-cols-2">
+              <div className="mt-2 ml-2">
+                <span className="text-gray-500 ml-1 border rounded px-1 py-1 bg-slate-200 shadow">
+                  Last Update:
+                </span>
+                <span className="text-gray-500 ml-1 border rounded px-1 py-1 bg-red-100 font-bold shadow">
+                  Tony Stark
+                </span>
+                <span className="text-gray-500 ml-1 border rounded px-1 py-1 bg-blue-100 font-bold shadow">
+                  02/08/2023 11:55:04
+                </span>
+              </div>
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  className="font-bold focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                >
+                  SAVE
+                </button>
+              </div>
             </div>
           </>
         }
