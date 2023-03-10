@@ -7,8 +7,15 @@ import DS4 from '../../public/ds4.jpeg';
 import Inputfield from '../../components/form/Inputfield';
 import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
 import InputfieldIcon from '../../components/form/InputfieldIcon';
+import Link from 'next/link';
+import RadioBox from '../../components/form/RadioBox';
 
 export default function VehiclesEdit() {
+  const options = [
+    { name: 'option1', label: 'Yes' },
+    { name: 'option2', label: 'No' },
+  ];
+  const handleClick = (event) => {};
   return (
     <div className="px-4 md:px-16">
       <p className="text-gray-700 text-3xl mb-4 font-bold">
@@ -37,12 +44,16 @@ export default function VehiclesEdit() {
                 <div className="text-md text-gray-500 dark:text-gray-400">
                   4587776312
                 </div>
-              </div>
+              </div>{' '}
               <div>
                 <div className="font-bold">Driver License</div>
-                <div className="text-md text-gray-500 dark:text-gray-400">
-                  G012345 | M12345
-                </div>
+                <Link href="/Operator/DriverLicense" className="">
+                  <div className="text-md text-gray-500 dark:text-gray-400 ">
+                    <span className="rounded-lg px-1 hover:bg-gray-300 hover:shadow">
+                      G012345 | M12345
+                    </span>
+                  </div>
+                </Link>
               </div>
               <div>
                 <div className="font-bold">PRD</div>
@@ -57,19 +68,55 @@ export default function VehiclesEdit() {
                 <a href="#" className="flex justify-center">
                   <Image src={Cupra} alt="Cupra Formentor" height={90} />
                 </a>
-                <div className="p-2">
+                <div className="p-1">
                   <a href="#">
-                    <div className="flex justify-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <div className="flex justify-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Cupra Formentor 2022
                     </div>
+                    <div className="flex justify-center text-md">
+                      WHITE 2.5 287 kW
+                    </div>
                   </a>
-                  <p className="flex justify-center">VZ5 2.5 TSI 287 kW</p>
-                  <p className="flex justify-center mb-1 font-bold text-gray-700 dark:text-gray-400">
-                    AFI N-23456 | EP178GN
+
+                  <p className="flex justify-center mb-1 font-bold text-gray-700 dark:text-gray-400 mt-1">
+                    <span className="text-gray-500 ml-1 border rounded px-1 bg-gray-100">
+                      AFI N-23456{' '}
+                    </span>
+                    <span className="text-gray-500 ml-1 border rounded px-1 bg-gray-100">
+                      EP178GN
+                    </span>
+                    <span className="text-gray-500 ml-1 border rounded px-1 bg-gray-100">
+                      EXP: 02/22/2024
+                    </span>{' '}
                   </p>
-                  <p className="flex justify-center font-bold text-gray-700 dark:text-gray-400">
-                    <span className="text-gray-500 mr-1">EXP: </span> 02/22/2024
-                  </p>
+                </div>
+                <hr className="h-px mb-1 bg-gray-200 border-0 dark:bg-gray-700" />
+                <div className="grid grid-cols-2">
+                  <div className="">
+                    <button
+                      type="button"
+                      class="py-2 px-7 ml-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      DISMISS
+                    </button>
+                  </div>
+                  <div
+                    class="inline-flex rounded-md shadow-sm mb-1 justify-right"
+                    role="group"
+                  >
+                    <button
+                      type="button"
+                      className="px-4 py-2 text-sm font-medium text-gray-900 bg-green-300 border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                    >
+                      Enable
+                    </button>
+                    <button
+                      type="button"
+                      className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                    >
+                      Disable
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:border-gray-400 cursor-pointer">
@@ -231,37 +278,39 @@ export default function VehiclesEdit() {
                 />
               </div>
               <div className="break-inside-avoid-column"></div>
-              <div className="ml-1">
-                <InputfieldIcon
-                  key="make"
-                  name="make"
-                  placeholder="Make"
-                  errorMessage=""
-                  maxlength="20"
-                  label="Make"
-                  type="text"
-                  required="true"
-                  value=""
-                  icon={
-                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
-                  }
-                />
-              </div>
-              <div className="ml-1">
-                <InputfieldIcon
-                  key="model"
-                  name="model"
-                  placeholder="Model"
-                  errorMessage=""
-                  maxlength="20"
-                  label="Model"
-                  type="text"
-                  required="true"
-                  value=""
-                  icon={
-                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
-                  }
-                />
+              <div className="grid grid-cols-2 ml-2">
+                <div className="ml-1">
+                  <InputfieldIcon
+                    key="make"
+                    name="make"
+                    placeholder="Make"
+                    errorMessage=""
+                    maxlength="20"
+                    label="Make"
+                    type="text"
+                    required="true"
+                    value=""
+                    icon={
+                      <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                    }
+                  />
+                </div>
+                <div className="ml-1">
+                  <InputfieldIcon
+                    key="model"
+                    name="model"
+                    placeholder="Model"
+                    errorMessage=""
+                    maxlength="20"
+                    label="Model"
+                    type="text"
+                    required="true"
+                    value=""
+                    icon={
+                      <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                    }
+                  />
+                </div>
               </div>
               <div className="grid grid-cols-2 ml-2">
                 <div className="">
@@ -294,21 +343,26 @@ export default function VehiclesEdit() {
                   />
                 </div>
               </div>
-              <div>
-                <Inputfield
-                  key="color"
-                  name="color"
-                  placeholder="Color"
-                  errorMessage=""
-                  maxlength="20"
-                  label="Color"
-                  type="text"
-                  required="true"
-                  value=""
-                />
+              <div className="grid grid-cols-2 ml-2">
+                <div>
+                  <Inputfield
+                    key="color"
+                    name="color"
+                    placeholder="Color"
+                    errorMessage=""
+                    maxlength="20"
+                    label="Color"
+                    type="text"
+                    required="true"
+                    value=""
+                  />
+                </div>
+                <div className="ml-2 mt-1">
+                  <RadioBox title="New Car" options={options} />
+                </div>
               </div>
               <div>
-                <div className="grid grid-cols-2 ml-2">
+                <div className="grid grid-cols-3 ml-2">
                   <div>
                     <Inputfield
                       key="cylinders"
@@ -322,7 +376,7 @@ export default function VehiclesEdit() {
                       value=""
                     />
                   </div>
-                  <div>
+                  <div className="mr-1">
                     <Inputfield
                       key="tires"
                       name="tires"
@@ -330,6 +384,19 @@ export default function VehiclesEdit() {
                       errorMessage=""
                       maxlength="1"
                       label="Tires"
+                      type="text"
+                      required="true"
+                      value=""
+                    />
+                  </div>
+                  <div className="mr-1">
+                    <Inputfield
+                      key="fueltype"
+                      name="fueltype"
+                      placeholder="ex diesel, hybrid, electric, unleaded"
+                      errorMessage=""
+                      maxlength="1"
+                      label="Fuel Type"
                       type="text"
                       required="true"
                       value=""
@@ -355,7 +422,7 @@ export default function VehiclesEdit() {
                       }
                     />
                   </div>
-                  <div>
+                  <div className="mr-1">
                     <InputfieldIcon
                       key="value"
                       name="value"
@@ -479,6 +546,135 @@ export default function VehiclesEdit() {
                   </div>
                 </div>
               </div>
+              <div className="mr-1 ml-2">
+                <Inputfield
+                  key="entryMethod"
+                  name="entryMethod"
+                  placeholder="Entry Method"
+                  errorMessage=""
+                  maxlength="50"
+                  label="Entry Method"
+                  type="text"
+                  required="true"
+                  value=""
+                />
+              </div>
+              <div className="mr-1 ml-2">
+                <InputfieldIcon
+                  key="poaInfo"
+                  name="poaInfo"
+                  placeholder="POA Info"
+                  errorMessage=""
+                  maxlength="50"
+                  label="POA Info"
+                  type="text"
+                  required="true"
+                  value=""
+                  icon={
+                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                  }
+                />
+              </div>
+              <div className="col-span-4">
+                <div className="col-span-4">
+                  <div className="border-b border-gray-200 dark:border-gray-700 bg-stone-100">
+                    <ul className="font-bold flex flex-wrap -mb-px text-xl font-medium text-center text-gray-700 dark:text-gray-600">
+                      <li className="mr-2">
+                        <a
+                          href="#"
+                          className="font-bold inline-flex p-2 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500 group"
+                        >
+                          Insurance
+                        </a>
+                      </li>
+                      <li className="mr-2">
+                        <a
+                          href="#"
+                          onClick={handleClick}
+                          className="font-bold inline-flex p-2  border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+                          aria-current="page"
+                        >
+                          Lien Holder
+                        </a>
+                      </li>
+                      <li className="mr-2">
+                        <a
+                          href="#"
+                          className="font-bold inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+                        >
+                          Safety Inspection
+                        </a>
+                      </li>
+                      <li className="mr-2">
+                        <a
+                          href="#"
+                          className="font-bold inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+                        >
+                          Road Tax
+                        </a>
+                      </li>
+                      <li className="mr-2">
+                        <a
+                          href="#"
+                          className="font-bold inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+                        >
+                          Audit
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="myTabContent">
+                    <div
+                      className="h-[170px] p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
+                      id="profile"
+                      role="tabpanel"
+                      aria-labelledby="profile-tab"
+                    ></div>
+                    <div
+                      className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                      id="dashboard"
+                      role="tabpanel"
+                      aria-labelledby="dashboard-tab"
+                    ></div>
+                    <div
+                      className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                      id="settings"
+                      role="tabpanel"
+                      aria-labelledby="settings-tab"
+                    ></div>
+                    <div
+                      className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                      id="contacts"
+                      role="tabpanel"
+                      aria-labelledby="contacts-tab"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div className="ml-2 mr-1">
+                <InputfieldIcon
+                  key="gasCard"
+                  name="gasCard"
+                  placeholder="# 12345"
+                  errorMessage=""
+                  maxlength="50"
+                  label="Gas Card"
+                  required="true"
+                  value=""
+                  icon={
+                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                  }
+                />
+              </div>
+            </div>
+            <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
+            <div className="flex justify-end col-span-4">
+              <button
+                type="button"
+                className="mt-1 font-bold focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+              >
+                SAVE
+              </button>
             </div>
           </>
         }
