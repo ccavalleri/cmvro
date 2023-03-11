@@ -560,6 +560,19 @@ export default function VehiclesEdit() {
                 />
               </div>
               <div className="mr-1 ml-2">
+                <Inputfield
+                  key="a5t1ex1"
+                  name="a5t1ex1"
+                  placeholder="ex. document #"
+                  errorMessage=""
+                  maxlength="50"
+                  label="A-5/T1/EX-1"
+                  type="text"
+                  required="true"
+                  value=""
+                />
+              </div>
+              <div className="mr-1 ml-2">
                 <InputfieldIcon
                   key="poaInfo"
                   name="poaInfo"
@@ -568,6 +581,21 @@ export default function VehiclesEdit() {
                   maxlength="50"
                   label="POA Info"
                   type="text"
+                  required="true"
+                  value=""
+                  icon={
+                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                  }
+                />
+              </div>
+              <div className="ml-2 mr-1">
+                <InputfieldIcon
+                  key="gasCard"
+                  name="gasCard"
+                  placeholder="# 12345"
+                  errorMessage=""
+                  maxlength="50"
+                  label="Gas Card"
                   required="true"
                   value=""
                   icon={
@@ -625,7 +653,7 @@ export default function VehiclesEdit() {
                   </div>
                   <div id="myTabContent">
                     <div
-                      className="h-[170px] p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
+                      className="h-[90px] p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
                       id="profile"
                       role="tabpanel"
                       aria-labelledby="profile-tab"
@@ -706,21 +734,6 @@ export default function VehiclesEdit() {
                   </div>
                 </div>
               </div>
-              <div className="ml-2 mr-1">
-                <InputfieldIcon
-                  key="gasCard"
-                  name="gasCard"
-                  placeholder="# 12345"
-                  errorMessage=""
-                  maxlength="50"
-                  label="Gas Card"
-                  required="true"
-                  value=""
-                  icon={
-                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
-                  }
-                />
-              </div>
             </div>
             <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
             <div className="grid grid-cols-2">
@@ -738,7 +751,7 @@ export default function VehiclesEdit() {
               <div className="flex justify-end">
                 <button
                   type="button"
-                  className="font-bold focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  className="font-bold focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-lg px-5 py-2 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
                 >
                   SAVE
                 </button>
