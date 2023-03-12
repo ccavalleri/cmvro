@@ -24,7 +24,7 @@ export default function VehiclesEdit() {
       <Body
         content={
           <>
-            <div className="w-full grid grid-cols-4 p-2 bg-gray-50 dark:border-gray-600 dark:bg-gray-800">
+            <div className="w-full grid grid-cols-5 p-2 bg-gray-50 dark:border-gray-600 dark:bg-gray-800">
               <div className="flex items-center space-x-4">
                 <Image
                   src={Avatar}
@@ -61,8 +61,16 @@ export default function VehiclesEdit() {
                   11/02/2024
                 </div>
               </div>
+              <div className="w-full flex justify-end">
+                <button
+                  type="button"
+                  className="mt-1 py-1.5 px-7 ml-2 text-md font-bold text-gray-100 focus:outline-none bg-blue-300 rounded-lg border-4 border-blue-100 hover:bg-blue-600 hover:text-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  BASE TRANSFER
+                </button>
+              </div>
             </div>
-            <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
+            <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700 shadow" />
             <div className="w-full grid grid-cols-5 gap-6 p-3">
               <div className="max-w-sm bg-white border border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-gray-400 cursor-pointer">
                 <a href="#" className="flex justify-center">
@@ -277,7 +285,22 @@ export default function VehiclesEdit() {
                   value=""
                 />
               </div>
-              <div className="break-inside-avoid-column"></div>
+              <div className="mr-1 ml-2">
+                <InputfieldIcon
+                  key="poaInfo"
+                  name="poaInfo"
+                  placeholder="POA Info"
+                  errorMessage=""
+                  maxlength="50"
+                  label="POA Info"
+                  type="text"
+                  required="true"
+                  value=""
+                  icon={
+                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                  }
+                />
+              </div>
               <div className="grid grid-cols-2 ml-2">
                 <div className="ml-1">
                   <InputfieldIcon
@@ -559,51 +582,40 @@ export default function VehiclesEdit() {
                   value=""
                 />
               </div>
-              <div className="mr-1 ml-2">
-                <Inputfield
-                  key="a5t1ex1"
-                  name="a5t1ex1"
-                  placeholder="ex. document #"
-                  errorMessage=""
-                  maxlength="50"
-                  label="A-5/T1/EX-1"
-                  type="text"
-                  required="true"
-                  value=""
-                />
+              <div className="grid grid-cols-2 ml-1">
+                <div className="mr-1 ml-2">
+                  <Inputfield
+                    key="a5t1ex1"
+                    name="a5t1ex1"
+                    placeholder="ex. document #"
+                    errorMessage=""
+                    maxlength="50"
+                    label="A-5/T1/EX-1"
+                    type="text"
+                    required="true"
+                    value=""
+                  />
+                </div>{' '}
+                <div className="ml-2 mr-1">
+                  <InputfieldIcon
+                    key="gasCard"
+                    name="gasCard"
+                    placeholder="# 12345"
+                    errorMessage=""
+                    maxlength="50"
+                    label="Gas Card"
+                    required="true"
+                    value=""
+                    icon={
+                      <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                    }
+                  />
+                </div>
               </div>
-              <div className="mr-1 ml-2">
-                <InputfieldIcon
-                  key="poaInfo"
-                  name="poaInfo"
-                  placeholder="POA Info"
-                  errorMessage=""
-                  maxlength="50"
-                  label="POA Info"
-                  type="text"
-                  required="true"
-                  value=""
-                  icon={
-                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
-                  }
-                />
+              <div className="col-span-5">
+                <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" />
               </div>
-              <div className="ml-2 mr-1">
-                <InputfieldIcon
-                  key="gasCard"
-                  name="gasCard"
-                  placeholder="# 12345"
-                  errorMessage=""
-                  maxlength="50"
-                  label="Gas Card"
-                  required="true"
-                  value=""
-                  icon={
-                    <AdjustmentsIcon className="cursor-pointer h-7 w-7 text-gray-500" />
-                  }
-                />
-              </div>
-              <div className="col-span-4">
+              <div className="col-span-5">
                 <div className="col-span-4">
                   <div className="border-b border-gray-200 dark:border-gray-700 bg-stone-100">
                     <ul className="font-bold flex flex-wrap -mb-px text-xl font-medium text-center text-gray-700 dark:text-gray-600">
@@ -646,19 +658,19 @@ export default function VehiclesEdit() {
                           href="#"
                           className="font-bold inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
                         >
-                          Audit
+                          Trailer Link
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div id="myTabContent">
                     <div
-                      className="h-[90px] p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
+                      className="h-[92px] p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
                       id="profile"
                       role="tabpanel"
                       aria-labelledby="profile-tab"
                     >
-                      <div className="grid grid-cols-4">
+                      <div className="grid grid-cols-5">
                         <div className="">
                           <Inputfield
                             key="entryMethod"
@@ -711,6 +723,7 @@ export default function VehiclesEdit() {
                             value=""
                           />
                         </div>
+                        <div></div>
                       </div>
                     </div>
                     <div
@@ -734,8 +747,94 @@ export default function VehiclesEdit() {
                   </div>
                 </div>
               </div>
+              <div className="col-span-5">
+                <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+              </div>
+
+              <div className="col-span-2 border border-gray-200 py-1 ml-1">
+                <div className="border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
+                  Options:
+                </div>{' '}
+                <div
+                  class="inline-flex rounded-md shadow-sm mb-1 justify-right ml-2 mt-1"
+                  role="group"
+                >
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white-300 border border-blue-400 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    Transfer Ownership
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-blue-400 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    Power Of Attorney
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-span-2 border border-gray-200 py-1">
+                <div className="border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
+                  Documents:
+                </div>
+                <div
+                  class="inline-flex rounded-md shadow-sm mb-1 justify-right mt-1 ml-1"
+                  role="group"
+                >
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white-300 border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    FM1
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white-300 border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    POA
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white-300 border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    ACK
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white-300 border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    Police Check
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white-300 border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    IVA Exemption
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
+                  >
+                    Registration
+                  </button>
+                </div>
+              </div>
+              <div className="border border-gray-200 py-1 mr-1">
+                <div className="border border-gray-200 rounded-md shadow bg-red-400 text-gray-700 md:text-md text-white font-bold py-1 px-1">
+                  Audit:
+                </div>
+                <div className="mt-1">
+                  <button
+                    type="button"
+                    class="ml-1 py-2 px-7 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Logs
+                  </button>
+                </div>
+              </div>
             </div>
-            <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
+            <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700" />
             <div className="grid grid-cols-2">
               <div className="mt-2 ml-2">
                 <span className="text-gray-500 ml-1 border rounded px-1 py-1 bg-slate-200 shadow">
