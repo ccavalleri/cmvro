@@ -8,7 +8,7 @@ export default function ModalWindow({ show, onCloseDismiss }) {
       <Modal.Body>
         <div className="grid grid-cols-3">
           <div className="flex justify-center">
-            <div class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+            <div class="w-full h-fit mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
               <a
                 href="#"
                 aria-current="true"
