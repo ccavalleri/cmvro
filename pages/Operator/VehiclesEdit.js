@@ -22,6 +22,7 @@ export default function VehiclesEdit() {
   const handleClick = (event) => {};
   return (
     <>
+      {' '}
       <ModalWindow show={showDismissModal} onCloseDismiss={onCloseDismiss} />
       <div className="px-4 md:px-16">
         <p className="text-gray-700 text-3xl font-bold">
