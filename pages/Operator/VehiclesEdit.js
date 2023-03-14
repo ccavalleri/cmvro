@@ -10,15 +10,27 @@ import InputfieldIcon from '../../components/form/InputfieldIcon';
 import Link from 'next/link';
 import RadioBox from '../../components/form/RadioBox';
 import ModalWindow from '../../components/form/ModalWindow';
-import { useState } from 'react';
+import { Tabs } from '../../node_modules/flowbite-react/lib/cjs/components/Tab';
+import { Button } from '../../node_modules/flowbite-react/lib/cjs/components/Button';
+import { useState, useRef } from 'react';
 
 export default function VehiclesEdit() {
   const [showDismissModal, setShowDismissModal] = useState(false);
   const onCloseDismiss = () => setShowDismissModal(false);
+  const [activeTab, setActiveTab] = useState(0);
+  const tabsRef = useRef(null);
   const options = [
     { name: 'option1', label: 'Yes' },
     { name: 'option2', label: 'No' },
   ];
+  const vehicle_1 = {
+    image: 'Cupra',
+    model: 'Cupra Formentor 2022',
+    info: 'WHITE 2.5 287 kW',
+    afiPlate: 'AFI N-23456',
+    coverPlate: 'EP178GN',
+    expiration: '02/22/2024',
+  };
   const handleClick = (event) => {};
   return (
     <>
@@ -117,7 +129,7 @@ export default function VehiclesEdit() {
                   </div>
                 </div>{' '}
                 <div>
-                  <div className="font-bold">Driver License</div>
+                  <div className="font-bold">Driver's License</div>
                   <Link href="/Operator/DriverLicense" className="">
                     <div className="text-md text-gray-500 dark:text-gray-400 ">
                       <span className="rounded-lg px-1 hover:bg-gray-300 hover:shadow">
@@ -409,7 +421,7 @@ export default function VehiclesEdit() {
                     />
                   </div>
                 </div>
-                <div className="grid grid-cols-2 ml-2">
+                <div className="grid grid-cols-3 ml-2">
                   <div className="">
                     <InputfieldIcon
                       key="body"
@@ -434,6 +446,19 @@ export default function VehiclesEdit() {
                       errorMessage=""
                       maxlength="4"
                       label="Year"
+                      type="number"
+                      required="true"
+                      value=""
+                    />
+                  </div>
+                  <div>
+                    <Inputfield
+                      key="odometer"
+                      name="odometer"
+                      placeholder="ex. 78902"
+                      errorMessage=""
+                      maxlength="4"
+                      label="Odometer"
                       type="number"
                       required="true"
                       value=""
@@ -706,62 +731,18 @@ export default function VehiclesEdit() {
                   <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" />
                 </div>
                 <div className="col-span-5">
-                  <div className="col-span-4">
-                    <div className="border-b border-gray-200 dark:border-gray-700 bg-stone-100">
-                      <ul className="font-bold flex flex-wrap -mb-px text-xl font-medium text-center text-gray-700 dark:text-gray-600">
-                        <li className="mr-2">
-                          <a
-                            href="#"
-                            className="font-bold inline-flex p-2 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500 group"
-                          >
-                            Insurance
-                          </a>
-                        </li>
-                        <li className="mr-2">
-                          <a
-                            href="#"
-                            onClick={handleClick}
-                            className="font-bold inline-flex p-2  border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
-                            aria-current="page"
-                          >
-                            Lien Holder
-                          </a>
-                        </li>
-                        <li className="mr-2">
-                          <a
-                            href="#"
-                            className="font-bold inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
-                          >
-                            Safety Inspection
-                          </a>
-                        </li>
-                        <li className="mr-2">
-                          <a
-                            href="#"
-                            className="font-bold inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
-                          >
-                            Road Tax
-                          </a>
-                        </li>
-                        <li className="mr-2">
-                          <a
-                            href="#"
-                            className="font-bold inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
-                          >
-                            Trailer Link
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div id="myTabContent">
-                      <div
-                        className="h-[92px] p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
-                        id="profile"
-                        role="tabpanel"
-                        aria-labelledby="profile-tab"
-                      >
+                  <div className="col-span-4 h-36">
+                    <Tabs.Group
+                      aria-label="Default tabs"
+                      style="default"
+                      ref={tabsRef}
+                      onActiveTabChange={(tab) => setActiveTab(tab)}
+                      className=""
+                    >
+                      <Tabs.Item active title="Insurance" className="">
+                        {' '}
                         <div className="grid grid-cols-5">
-                          <div className="">
+                          <div className="-m-2">
                             <Inputfield
                               key="entryMethod"
                               name="entryMethod"
@@ -774,7 +755,7 @@ export default function VehiclesEdit() {
                               value=""
                             />
                           </div>
-                          <div className="">
+                          <div className="-m-2 ml-2">
                             <Inputfield
                               key="policyNumber"
                               name="policyNumber"
@@ -787,7 +768,7 @@ export default function VehiclesEdit() {
                               value=""
                             />
                           </div>
-                          <div className="">
+                          <div className="-m-2 ml-2">
                             <Inputfield
                               key="policySD"
                               name="policySD"
@@ -800,7 +781,7 @@ export default function VehiclesEdit() {
                               value=""
                             />
                           </div>
-                          <div className="">
+                          <div className="-m-2 ml-2">
                             <Inputfield
                               key="policyED"
                               name="policyED"
@@ -815,26 +796,133 @@ export default function VehiclesEdit() {
                           </div>
                           <div></div>
                         </div>
-                      </div>
-                      <div
-                        className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                        id="dashboard"
-                        role="tabpanel"
-                        aria-labelledby="dashboard-tab"
-                      ></div>
-                      <div
-                        className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                        id="settings"
-                        role="tabpanel"
-                        aria-labelledby="settings-tab"
-                      ></div>
-                      <div
-                        className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                        id="contacts"
-                        role="tabpanel"
-                        aria-labelledby="contacts-tab"
-                      ></div>
-                    </div>
+                      </Tabs.Item>
+                      <Tabs.Item title="Lien Holder">
+                        <div className="grid grid-cols-5">
+                          <div className="-m-2 col-span-3">
+                            <Inputfield
+                              key="lienHolder"
+                              name="lienHolder"
+                              placeholder="ex. AXA Financial Business"
+                              errorMessage=""
+                              maxlength="50"
+                              label="Lien Holder"
+                              type="text"
+                              required="true"
+                              value=""
+                            />
+                          </div>
+                          <div className="-m-2 ml-2">
+                            <Inputfield
+                              key="lienAmount"
+                              name="lienAmount"
+                              placeholder="ex. 12345"
+                              errorMessage=""
+                              maxlength="6"
+                              label="Lien Amount"
+                              type="number"
+                              required="true"
+                              value=""
+                            />
+                          </div>
+                          <div className="-m-2 ml-2">
+                            <Inputfield
+                              key="lienExp"
+                              name="lienExp"
+                              placeholder="ex. "
+                              errorMessage=""
+                              maxlength="20"
+                              label="Lien Expiration"
+                              type="date"
+                              required="true"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                      </Tabs.Item>
+                      <Tabs.Item title="Safety Inspection">
+                        <div className="grid grid-cols-5">
+                          <div className="-m-2">
+                            <Inputfield
+                              key="safetyStartDate"
+                              name="safetyStartDate"
+                              placeholder=""
+                              errorMessage=""
+                              maxlength="50"
+                              label="Start Date"
+                              type="date"
+                              required="true"
+                              value=""
+                            />
+                          </div>
+                          <div className="-m-2 ml-2">
+                            <Inputfield
+                              key="safetyEndDate"
+                              name="safetyEndDate"
+                              placeholder=""
+                              errorMessage=""
+                              maxlength="50"
+                              label="End Date"
+                              type="date"
+                              required="true"
+                              value=""
+                            />
+                          </div>
+                          <div className="-m-2 col-span-3"></div>
+                        </div>
+                      </Tabs.Item>
+                      <Tabs.Item title="Road Tax">
+                        {' '}
+                        <div className="grid grid-cols-5">
+                          <div className="-m-2">
+                            <Inputfield
+                              key="roadtaxStartDate"
+                              name="roadtaxStartDate"
+                              placeholder=""
+                              errorMessage=""
+                              maxlength="50"
+                              label="Start Date"
+                              type="date"
+                              required="true"
+                              value=""
+                            />
+                          </div>
+                          <div className="-m-2 ml-2">
+                            <Inputfield
+                              key="roadtaxEndDate"
+                              name="roadtaxEndDate"
+                              placeholder=""
+                              errorMessage=""
+                              maxlength="50"
+                              label="End Date"
+                              type="date"
+                              required="true"
+                              value=""
+                            />
+                          </div>
+                          <div className="-m-2 ml-2">
+                            <InputfieldIcon
+                              key="roadtaxAmount"
+                              name="roadtaxAmount"
+                              placeholder="Value"
+                              errorMessage=""
+                              maxlength="6"
+                              label="Road Tax Amount"
+                              type="number"
+                              required="true"
+                              value=""
+                              icon={
+                                <CalculatorIcon className="cursor-pointer h-7 w-7 text-gray-500" />
+                              }
+                            />
+                          </div>
+                          <div className="col-span-2"></div>
+                        </div>
+                      </Tabs.Item>
+                      <Tabs.Item title="Trailer Link">
+                        Profile content
+                      </Tabs.Item>
+                    </Tabs.Group>
                   </div>
                 </div>
                 <div className="col-span-5">
