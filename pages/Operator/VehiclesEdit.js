@@ -129,7 +129,7 @@ export default function VehiclesEdit() {
                   </div>
                 </div>{' '}
                 <div>
-                  <div className="font-bold">Driver License</div>
+                  <div className="font-bold">Driver&apos;s License</div>
                   <Link href="/Operator/DriverLicense" className="">
                     <div className="text-md text-gray-500 dark:text-gray-400 ">
                       <span className="rounded-lg px-1 hover:bg-gray-300 hover:shadow">
