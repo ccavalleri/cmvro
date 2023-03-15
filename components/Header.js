@@ -67,7 +67,6 @@ export default function Header() {
                 >
                   <DocumentReportIcon className="h-6 bl-2 mr-4 bg-blue cursor-pointer" />{' '}
                   Note
-                  <ArrowNarrowDownIcon className="h-6 text-white ml-3 mr-1 " />
                 </button>
               </li>
               <li className="relative inline-block text-left">
