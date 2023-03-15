@@ -13,6 +13,7 @@ import ModalWindow from '../../components/form/ModalWindow';
 import { Tabs } from '../../node_modules/flowbite-react/lib/cjs/components/Tab';
 import { Button } from '../../node_modules/flowbite-react/lib/cjs/components/Button';
 import { useState, useRef } from 'react';
+import VehicleCard from '../../components/ui/VehicleCard';
 
 export default function VehiclesEdit() {
   const [showDismissModal, setShowDismissModal] = useState(false);
@@ -31,6 +32,23 @@ export default function VehiclesEdit() {
     coverPlate: 'EP178GN',
     expiration: '02/22/2024',
   };
+  const vehicle_2 = {
+    image: 'Gla',
+    model: 'Mercedes Benz GLA 2021',
+    info: 'BLACK 2.2 165KW',
+    afiPlate: 'AFI 2N-26333',
+    coverPlate: 'EC728TT',
+    expiration: '10/22/2023',
+  };
+  const vehicle_3 = {
+    image: 'DS4',
+    model: 'DS4 Cross Rivoli 2022',
+    info: 'GOLD 1.5 105KW',
+    afiPlate: 'AFI 2N-11223',
+    coverPlate: 'EX128XX',
+    expiration: '02/08/2023',
+  };
+
   const handleClick = (event) => {};
   return (
     <>
@@ -155,116 +173,9 @@ export default function VehiclesEdit() {
               </div>
               <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700 shadow" />
               <div className="w-full grid grid-cols-5 gap-6 p-3">
-                <div className="max-w-sm bg-white border border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-gray-400 cursor-pointer">
-                  <a href="#" className="flex justify-center">
-                    <Image src={Cupra} alt="Cupra Formentor" height={90} />
-                  </a>
-                  <div className="p-1">
-                    <a href="#">
-                      <div className="flex justify-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Cupra Formentor 2022
-                      </div>
-                      <div className="flex justify-center text-md">
-                        WHITE 2.5 287 kW
-                      </div>
-                    </a>
-
-                    <p className="flex justify-center mb-1 font-bold text-gray-700 dark:text-gray-400 mt-1">
-                      <span className="text-gray-500 ml-1 border rounded px-1 bg-gray-100">
-                        AFI N-23456{' '}
-                      </span>
-                      <span className="text-gray-500 ml-1 border rounded px-1 bg-gray-100">
-                        EP178GN
-                      </span>
-                      <span className="text-gray-500 ml-1 border rounded px-1 bg-gray-100">
-                        EXP: 02/22/2024
-                      </span>{' '}
-                    </p>
-                  </div>
-                  <hr className="h-px mb-1 bg-gray-200 border-0 dark:bg-gray-700" />
-                  <div className="grid grid-cols-2">
-                    <div className="">
-                      <button
-                        onClick={() => setShowDismissModal(true)}
-                        type="button"
-                        class="py-2 px-7 ml-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                      >
-                        DISMISS
-                      </button>
-                    </div>
-                    <div
-                      class="inline-flex rounded-md shadow-sm mb-1 justify-right"
-                      role="group"
-                    >
-                      <button
-                        type="button"
-                        className="px-4 py-2 text-sm font-medium text-gray-900 bg-green-300 border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-                      >
-                        Enable
-                      </button>
-                      <button
-                        type="button"
-                        className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-                      >
-                        Disable
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:border-gray-400 cursor-pointer">
-                  <a href="#" className="flex justify-center">
-                    <Image
-                      src={Gla}
-                      alt="Mercedes Benz GLA"
-                      className="object-center"
-                      height={90}
-                    />
-                  </a>
-                  <div className="p-2">
-                    <a href="#">
-                      <div className="flex justify-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Mercedes Benz GLA 2021
-                      </div>
-                    </a>
-                    <p className="flex justify-center">
-                      250 Automatic 2.2 4MATIC 165KW
-                    </p>
-                    <p className="flex justify-center mb-1 font-bold text-gray-700 dark:text-gray-400">
-                      AFI 2N-26333 | EC728TT
-                    </p>
-                    <p className="flex justify-center font-bold text-gray-700 dark:text-gray-400">
-                      <span className="text-gray-500 mr-1">EXP: </span>{' '}
-                      10/22/2023
-                    </p>
-                  </div>
-                </div>
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:border-gray-400 cursor-pointer">
-                  <a href="#" className="flex justify-center">
-                    <Image
-                      src={DS4}
-                      alt="DS4"
-                      className="object-center"
-                      height={90}
-                    />
-                  </a>
-                  <div className="p-2">
-                    <a href="#">
-                      <div className="flex justify-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        DS4
-                      </div>
-                    </a>
-                    <p className="flex justify-center">
-                      Cross Rivoli 1.5 96KW Automatic
-                    </p>
-                    <p className="flex justify-center mb-1 font-bold text-gray-700 dark:text-gray-400">
-                      AFI 2N-11223 | EX128XX
-                    </p>
-                    <p className="flex justify-center font-bold text-gray-700 dark:text-gray-400">
-                      <span className="text-gray-500 mr-1">EXP: </span>{' '}
-                      02/08/2023
-                    </p>
-                  </div>
-                </div>
+                <VehicleCard options={vehicle_1} setShowDismissModal={setShowDismissModal}/>
+                <VehicleCard options={vehicle_2} setShowDismissModal={setShowDismissModal}/>
+                <VehicleCard options={vehicle_3} setShowDismissModal={setShowDismissModal}/>
               </div>
               <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
               <div className="grid gap-1 md:grid-cols-5">
