@@ -4,8 +4,6 @@ import DS4 from '../../public/ds4.jpeg';
 import Trailer from '../../public/trailer.jpg';
 
 import Image from 'next/image';
-import { treeTitleAsListItemTitleBehavior } from '@fluentui/react-northstar';
-import { treeAsListBehavior } from '@fluentui/accessibility';
 
 export default function VehicleCard({ options, setShowDismissModal }) {
   return (
