@@ -206,7 +206,7 @@ export default function ModalWindow({ show, onCloseDismiss }) {
               <div className="mt-2 border border-gray-200 rounded-lg py-2 text-slate-600">
                 <p className="pl-1">
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  typesetting industry. Lorem Ipsum has been the industry&apos;s
                   standard dummy text ever since the 1500s,when an unknown
                   printer took a galley of type and scrambled it to make a type
                   specimen book.{' '}
