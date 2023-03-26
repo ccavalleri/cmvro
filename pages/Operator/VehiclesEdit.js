@@ -4,6 +4,8 @@ import Avatar from '../../public/avatar.jpg';
 import Cupra from '../../public/cupra-formentor.png';
 import Gla from '../../public/gla.jpeg';
 import DS4 from '../../public/ds4.jpeg';
+import Trailer from '../../public/trailer.jpg';
+
 import Inputfield from '../../components/form/Inputfield';
 import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
 import InputfieldIcon from '../../components/form/InputfieldIcon';
@@ -48,7 +50,14 @@ export default function VehiclesEdit() {
     coverPlate: 'EX128XX',
     expiration: '02/08/2023',
   };
-
+  const vehicle_4 = {
+    image: 'Trailer',
+    model: 'La Mancelle',
+    info: 'Liberty 440PC',
+    afiPlate: 'AFI 2N-33442',
+    coverPlate: 'PN311AX',
+    expiration: '02/08/2023',
+  };
   const handleClick = (event) => {};
   return (
     <>
@@ -120,7 +129,7 @@ export default function VehiclesEdit() {
               </li>
             </ol>
           </nav>
-          <span className="text-gray-400 mr-1">Edit:</span> Vehicles
+          <span className="text-gray-400 mr-1">Edit:</span> Vehicles{' '}
         </p>
         <Body
           content={
@@ -173,9 +182,25 @@ export default function VehiclesEdit() {
               </div>
               <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700 shadow" />
               <div className="w-full grid grid-cols-5 gap-6 p-3">
-                <VehicleCard options={vehicle_1} setShowDismissModal={setShowDismissModal}/>
-                <VehicleCard options={vehicle_2} setShowDismissModal={setShowDismissModal}/>
-                <VehicleCard options={vehicle_3} setShowDismissModal={setShowDismissModal}/>
+                <div className="flex items-center col-span-2">
+                  <VehicleCard
+                    options={vehicle_1}
+                    setShowDismissModal={setShowDismissModal}
+                  />
+                  <div className="h-5 w-5 bg-gray-200 border-gray-400 border-b-2 border-t-2"></div>
+                  <VehicleCard
+                    options={vehicle_4}
+                    setShowDismissModal={setShowDismissModal}
+                  />
+                </div>
+                <VehicleCard
+                  options={vehicle_2}
+                  setShowDismissModal={setShowDismissModal}
+                />
+                <VehicleCard
+                  options={vehicle_3}
+                  setShowDismissModal={setShowDismissModal}
+                />
               </div>
               <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
               <div className="grid gap-1 md:grid-cols-5">
@@ -831,7 +856,10 @@ export default function VehiclesEdit() {
                         </div>
                       </Tabs.Item>
                       <Tabs.Item title="Trailer Link">
-                        Profile content
+                        <select>
+                          <option value="">Cupra Formentor 2022</option>
+                          <option value="">Mercedes Benz GLA</option>
+                        </select>
                       </Tabs.Item>
                     </Tabs.Group>
                   </div>

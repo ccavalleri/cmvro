@@ -11,8 +11,8 @@ import ModalWindowNote from './form/ModalWindowNote';
 
 export default function Header() {
   const searchInputRef = useRef(null);
-  const [showNote, setShowNote] = useState(false);
-  const onCloseNote = () => setShowNote(false);
+  const [showNote, setShowNote] = useState({buttonShow: true, modalShow: false});
+  const onCloseNote = () => setShowNote({buttonShow: true, modalShow: false});
 
   return (
     <>
@@ -59,16 +59,17 @@ export default function Header() {
             <ul className="lg:flex items-center justify-between text-md text-gray-900 font-semibold pt-4 lg:pt-0">
               <li className="relative inline-block text-left"></li>
               <li className="relative inline-block text-left"></li>
-              <li>
+              <li>{showNote.buttonShow ?
                 <button
-                  onClick={() => setShowNote(true)}
+                  onClick={() => setShowNote({buttonShow: true, modalShow: true})}
                   type="button"
                   class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 uppercase git afocus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   <DocumentReportIcon className="h-6 bl-2 mr-4 bg-blue cursor-pointer" />{' '}
                   Note
                 </button>
-              </li>
+                : ""
+              }</li>
               <li className="relative inline-block text-left">
                 <div className="grid grid-cols-3 shadow rounded-lg mx-2 h-12 content-center bg-gray-100">
                   <div

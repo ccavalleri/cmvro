@@ -1,7 +1,7 @@
 import { forwardRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ClipboardIcon, PencilIcon, SearchIcon } from '@heroicons/react/solid';
+import { ClipboardIcon, PencilIcon, SearchIcon,setUserInterface } from '@heroicons/react/solid';
 import { useRouter } from 'next/router';
 
 import {
@@ -40,36 +40,43 @@ const OperatorItems = [
     name: 'Waiting List',
     url: '/Operator/Waiting',
     icon: <CalendarIcon className="h-7 w-7" />,
+    noteButton: false
   },
   {
     name: 'Inprocessing',
     url: '/Operator/Inprocessing',
     icon: <UserAddIcon className="h-7 w-7" />,
+    noteButton: true
   },
   {
     name: 'Personnel and Vehicles',
     url: '/Operator/PersonnelnVehicles',
     icon: <InboxIcon className="h-7 w-7" />,
+    noteButton: true
   },
   {
     name: 'Outprocessing',
     url: '/Operator/Outprocessing',
     icon: <UserRemoveIcon className="h-7 w-7" />,
+    noteButton: true
   },
   {
     name: 'Tag Tracker',
     url: '/Operator/Tagtracker',
     icon: <TagIcon className="h-7 w-7" />,
+    noteButton: false
   },
   {
     name: 'Forms and Reports',
     url: '/Operator/FormsnReports',
     icon: <DocumentDuplicateIcon className="h-7 w-7" />,
+    noteButton: false
   },
   {
     name: 'Sponsor Audit',
     url: '/Operator/SponsorAudit',
     icon: <UsersIcon className="h-7 w-7" />,
+    noteButton: false
   },
 ];
 const AdministratorItems = [
@@ -192,7 +199,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <div className="pl-2 text-gray-200 mt-2 bg-slate-700">Operator</div>
         {OperatorItems.map((item) => {
           return (
-            <Link href={item.url} key={item.name}>
+            <Link href={item.url} key={item.name} noteButton={item.noteButton}>
               <div
                 className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
                   router.pathname == item.url

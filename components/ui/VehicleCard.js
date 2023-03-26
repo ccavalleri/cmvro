@@ -1,7 +1,11 @@
 import Cupra from '../../public/cupra-formentor.png';
 import Gla from '../../public/gla.jpeg';
 import DS4 from '../../public/ds4.jpeg';
+import Trailer from '../../public/trailer.jpg';
+
 import Image from 'next/image';
+import { treeTitleAsListItemTitleBehavior } from '@fluentui/react-northstar';
+import { treeAsListBehavior } from '@fluentui/accessibility';
 
 export default function VehicleCard({ options, setShowDismissModal }) {
   return (
@@ -15,6 +19,8 @@ export default function VehicleCard({ options, setShowDismissModal }) {
               ? Gla
               : options.image === 'DS4'
               ? DS4
+              : options.image === 'Trailer'
+              ? Trailer
               : ''
           }
           alt={options.model}
