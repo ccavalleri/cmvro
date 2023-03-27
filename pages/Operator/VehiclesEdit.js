@@ -23,6 +23,14 @@ export default function VehiclesEdit() {
   const [activeTab, setActiveTab] = useState(0);
   const [TrailerTab, setTrailerTab] = useState(true);
 
+  const [cardBorder, setCardBorder] = useState({
+    card1: 'border',
+    card2: 'border',
+    card3: 'border',
+    card4: 'border',
+    card5: 'border',
+  });
+
   const tabsRef = useRef(null);
   const options = [
     { name: 'option1', label: 'Yes' },
@@ -61,7 +69,7 @@ export default function VehiclesEdit() {
   const vehicle_4 = {
     image: 'Trailer',
     model: 'La Mancelle',
-    info: 'Liberty 440PC',
+    info: 'LIBERTY 440PC',
     type: 'R',
     afiPlate: 'AFI 2N-33442',
     coverPlate: 'PN311AX',
@@ -224,28 +232,46 @@ export default function VehiclesEdit() {
               <div className="w-full grid grid-cols-5 gap-6 p-3">
                 <div className="flex items-center col-span-2">
                   <VehicleCard
+                    id="card1"
                     options={vehicle_1}
                     setShowDismissModal={setShowDismissModal}
                     setTrailerTab={setTrailerTab}
+                    setCardBorder={setCardBorder}
+                    cardBorder={cardBorder.card1}
                   />
                   <div className="h-5 w-5 bg-gray-200 border-gray-400 border-b-2 border-t-2"></div>
                   <VehicleCard
+                    id="card2"
                     options={vehicle_4}
                     setShowDismissModal={setShowDismissModal}
                     setTrailerTab={setTrailerTab}
+                    setCardBorder={setCardBorder}
+                    cardBorder={cardBorder.card2}
                   />
                 </div>
                 <VehicleCard
+                  id="card3"
                   options={vehicle_2}
                   setShowDismissModal={setShowDismissModal}
+                  setCardBorder={setCardBorder}
+                  setTrailerTab={setTrailerTab}
+                  cardBorder={cardBorder.card3}
                 />
                 <VehicleCard
+                  id="card4"
                   options={vehicle_3}
                   setShowDismissModal={setShowDismissModal}
+                  setCardBorder={setCardBorder}
+                  setTrailerTab={setTrailerTab}
+                  cardBorder={cardBorder.card4}
                 />
                 <VehicleCard
+                  id="card5"
                   options={vehicle_5}
                   setShowDismissModal={setShowDismissModal}
+                  setCardBorder={setCardBorder}
+                  setTrailerTab={setTrailerTab}
+                  cardBorder={cardBorder.card5}
                 />
               </div>
               <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -1007,7 +1033,7 @@ export default function VehiclesEdit() {
                     Tony Stark
                   </span>
                   <span className="text-gray-500 ml-1 border rounded px-1 py-1 bg-blue-100 font-bold shadow">
-                    02/08/2023 11:55:04
+                    03/27/2023 22:54:04
                   </span>
                 </div>
                 <div className="flex justify-end">

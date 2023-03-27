@@ -7,21 +7,28 @@ import Moped from '../../public/Ruckus.jpg';
 import Image from 'next/image';
 
 export default function VehicleCard({
+  id,
   options,
   setShowDismissModal,
   setTrailerTab,
+  setCardBorder,
+  cardBorder,
 }) {
   const vehicleselected = (e) => {
-    if (options.type === 'R') return setTrailerTab(false);
-    else return setTrailerTab(true);
-   
+    if (options.type === 'R') setTrailerTab(false);
+    else setTrailerTab(true);
+    const cards = { card1: 'border', card2: 'border', card3:'border', card4:'border',card5:'border' };
+
+    setCardBorder({ ...cards, [e.currentTarget.id]: 'border-4' });
+    console.log({ ...cards, [e.currentTarget.id]: 'border-4' });
   };
 
-  const cardActive="border";
+  const cardActive = 'border';
 
   return (
     <div
-      className={`max-w-sm bg-white ${cardActive} border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-blue-400 cursor-pointer`}
+      id={id}
+      className={`max-w-sm bg-white ${cardBorder} border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-blue-400 hover:shadow-lg cursor-pointer`}
       onClick={vehicleselected}
     >
       <div className="grid grid-cols-3">
