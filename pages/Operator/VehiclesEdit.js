@@ -699,7 +699,7 @@ export default function VehiclesEdit() {
                     <Inputfield
                       key="maxFuel"
                       name="maxFuel"
-                      placeholder="fuel"
+                      placeholder="fuel allowance"
                       errorMessage=""
                       maxlength="50"
                       label="Fuel Allowance"
