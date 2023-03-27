@@ -2,29 +2,37 @@ import Cupra from '../../public/cupra-formentor.png';
 import Gla from '../../public/gla.jpeg';
 import DS4 from '../../public/ds4.jpeg';
 import Trailer from '../../public/trailer.jpg';
+import Moped from '../../public/Ruckus.jpg';
 
 import Image from 'next/image';
 
 export default function VehicleCard({ options, setShowDismissModal }) {
   return (
     <div className="max-w-sm bg-white border border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-gray-400 cursor-pointer">
-      <a href="#" className="flex justify-center">
-        <Image
-          src={
-            options.image === 'Cupra'
-              ? Cupra
-              : options.image === 'Gla'
-              ? Gla
-              : options.image === 'DS4'
-              ? DS4
-              : options.image === 'Trailer'
-              ? Trailer
-              : ''
-          }
-          alt={options.model}
-          height={90}
-        />
-      </a>
+      <div className="grid grid-cols-3">
+        <div className='col-span-2'>
+          <a href="#" className="flex justify-end">
+            <Image
+              src={
+                options.image === 'Cupra'
+                  ? Cupra
+                  : options.image === 'Gla'
+                  ? Gla
+                  : options.image === 'DS4'
+                  ? DS4
+                  : options.image === 'Trailer'
+                  ? Trailer
+                  : options.image === 'Moped'
+                  ? Moped
+                  : ''
+              }
+              alt={options.model}
+              height={90}
+            />
+          </a>
+        </div>
+        <div className="text-md flex justify-end py-2 px-2"><span className="border border-gray-300 h-7 px-2 rounded-lg">{options.image ==='Cupra' || options.image ==='Gla' || options.image ==='DS4' ? 'A' : options.image ==='Trailer' ? "T" : options.image ==='Moped' ? "X" : ""}</span></div>
+      </div>
       <div className="p-1">
         <a href="#">
           <div className="flex justify-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -58,6 +58,15 @@ export default function VehiclesEdit() {
     coverPlate: 'PN311AX',
     expiration: '02/08/2023',
   };
+
+  const vehicle_5 = {
+    image: 'Moped',
+    model: 'Ruckus 2018',
+    info: '49CC',
+    afiPlate: 'N346',
+    coverPlate: 'X72J2Z',
+    expiration: '08/28/2023',
+  };
   const handleClick = (event) => {};
   return (
     <>
@@ -199,6 +208,10 @@ export default function VehiclesEdit() {
                 />
                 <VehicleCard
                   options={vehicle_3}
+                  setShowDismissModal={setShowDismissModal}
+                />
+                 <VehicleCard
+                  options={vehicle_5}
                   setShowDismissModal={setShowDismissModal}
                 />
               </div>
