@@ -6,11 +6,26 @@ import Moped from '../../public/Ruckus.jpg';
 
 import Image from 'next/image';
 
-export default function VehicleCard({ options, setShowDismissModal, setTrailerTab }) {
+export default function VehicleCard({
+  options,
+  setShowDismissModal,
+  setTrailerTab,
+}) {
+  const vehicleselected = (e) => {
+    if (options.type === 'R') return setTrailerTab(false);
+    else return setTrailerTab(true);
+   
+  };
+
+  const cardActive="border";
+
   return (
-    <div className="max-w-sm bg-white border border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-blue-400 cursor-pointer" onClick={() => options.type === 'R' ? setTrailerTab(false) : setTrailerTab(true)}>
+    <div
+      className={`max-w-sm bg-white ${cardActive} border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-blue-400 cursor-pointer`}
+      onClick={vehicleselected}
+    >
       <div className="grid grid-cols-3">
-        <div className='col-span-2'>
+        <div className="col-span-2">
           <a href="#" className="flex justify-end">
             <Image
               src={
@@ -31,7 +46,11 @@ export default function VehicleCard({ options, setShowDismissModal, setTrailerTa
             />
           </a>
         </div>
-        <div className="text-md flex justify-end py-2 px-2"><span className="border border-gray-300 h-7 px-2 rounded-lg">{options.type}</span></div>
+        <div className="text-md flex justify-end py-2 px-2">
+          <span className="border border-gray-300 h-7 px-2 rounded-lg">
+            {options.type}
+          </span>
+        </div>
       </div>
       <div className="p-1">
         <a href="#">
