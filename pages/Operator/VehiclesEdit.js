@@ -202,7 +202,7 @@ export default function VehiclesEdit() {
                   <span className="ml-1">:</span>
                   <span className="text-blue-500 ml-1">0</span>
                   <span className="mx-2 h-7 border border-r-2"></span>
-                  <span className="ml-2">T</span>
+                  <span className="ml-2">R</span>
                   <span className="ml-1">:</span>
                   <span className="text-blue-500 ml-1">1</span>
                   <span className="mx-2 h-7 border border-r-2"></span>
