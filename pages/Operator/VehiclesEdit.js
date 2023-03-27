@@ -360,7 +360,7 @@ export default function VehiclesEdit() {
                     placeholder="POA Info"
                     errorMessage=""
                     maxlength="50"
-                    label="POA Sponsor Information"
+                    label="POA Information"
                     type="text"
                     required="true"
                     value=""
@@ -549,8 +549,8 @@ export default function VehiclesEdit() {
                     <div>
                       <Inputfield
                         key="cc"
-                        name="weight"
-                        placeholder="Weight"
+                        name="cc"
+                        placeholder="cc"
                         errorMessage=""
                         maxlength="4"
                         label="CC"
@@ -702,7 +702,7 @@ export default function VehiclesEdit() {
                       placeholder="fuel"
                       errorMessage=""
                       maxlength="50"
-                      label="Max Fuel"
+                      label="Fuel Allowance"
                       type="text"
                       required="true"
                       value=""
