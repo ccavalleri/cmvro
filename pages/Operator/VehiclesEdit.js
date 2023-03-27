@@ -143,7 +143,7 @@ export default function VehiclesEdit() {
         <Body
           content={
             <>
-              <div className="w-full grid grid-cols-5 p-2 bg-gray-50 dark:border-gray-600 dark:bg-gray-800">
+              <div className="w-full grid grid-cols-6 p-2 bg-gray-50 dark:border-gray-600 dark:bg-gray-800">
                 <div className="flex items-center space-x-4">
                   <Image
                     src={Avatar}
@@ -180,10 +180,29 @@ export default function VehiclesEdit() {
                     11/02/2024
                   </div>
                 </div>
+                <div className="border border-gray-200 shadow rounded-lg flex items-center font-bold text-xl">
+                  <span className="ml-11 mx-2 h-7 border border-r-2"></span>
+                  <span className="ml-2">A</span>
+                  <span className="ml-1">:</span>
+                  <span className="text-red-500 ml-1">3</span>
+                  <span className="mx-2 h-7 border border-r-2"></span>
+                  <span className="ml-2">M</span>
+                  <span className="ml-1">:</span>
+                  <span className="text-blue-500 ml-1">0</span>
+                  <span className="mx-2 h-7 border border-r-2"></span>
+                  <span className="ml-2">T</span>
+                  <span className="ml-1">:</span>
+                  <span className="text-blue-500 ml-1">1</span>
+                  <span className="mx-2 h-7 border border-r-2"></span>
+                  <span className="ml-2">X</span>
+                  <span className="ml-1">:</span>
+                  <span className="text-blue-500 ml-1">1</span>
+                  <span className="mx-2 h-7 border border-r-2"></span>
+                </div>
                 <div className="w-full flex justify-end">
                   <button
                     type="button"
-                    className="mt-1 py-1.5 px-7 ml-2 text-md font-bold text-gray-100 focus:outline-none bg-blue-300 rounded-lg border-4 border-blue-100 hover:bg-blue-600 hover:text-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    className="mt-1 py-1.5 px-7 ml-2 text-md font-bold text-gray-100 focus:outline-none bg-blue-500 rounded-lg border-4 border-blue-100 hover:bg-blue-600 hover:text-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                   >
                     BASE TRANSFER
                   </button>
@@ -210,7 +229,7 @@ export default function VehiclesEdit() {
                   options={vehicle_3}
                   setShowDismissModal={setShowDismissModal}
                 />
-                 <VehicleCard
+                <VehicleCard
                   options={vehicle_5}
                   setShowDismissModal={setShowDismissModal}
                 />
