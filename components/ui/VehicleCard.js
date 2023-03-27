@@ -6,9 +6,9 @@ import Moped from '../../public/Ruckus.jpg';
 
 import Image from 'next/image';
 
-export default function VehicleCard({ options, setShowDismissModal }) {
+export default function VehicleCard({ options, setShowDismissModal, setTrailerTab }) {
   return (
-    <div className="max-w-sm bg-white border border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-gray-400 cursor-pointer">
+    <div className="max-w-sm bg-white border border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-blue-400 cursor-pointer" onClick={() => options.type === 'R' ? setTrailerTab(false) : setTrailerTab(true)}>
       <div className="grid grid-cols-3">
         <div className='col-span-2'>
           <a href="#" className="flex justify-end">
@@ -31,7 +31,7 @@ export default function VehicleCard({ options, setShowDismissModal }) {
             />
           </a>
         </div>
-        <div className="text-md flex justify-end py-2 px-2"><span className="border border-gray-300 h-7 px-2 rounded-lg">{options.image ==='Cupra' || options.image ==='Gla' || options.image ==='DS4' ? 'A' : options.image ==='Trailer' ? "T" : options.image ==='Moped' ? "X" : ""}</span></div>
+        <div className="text-md flex justify-end py-2 px-2"><span className="border border-gray-300 h-7 px-2 rounded-lg">{options.type}</span></div>
       </div>
       <div className="p-1">
         <a href="#">

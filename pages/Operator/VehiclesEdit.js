@@ -21,6 +21,8 @@ export default function VehiclesEdit() {
   const [showDismissModal, setShowDismissModal] = useState(false);
   const onCloseDismiss = () => setShowDismissModal(false);
   const [activeTab, setActiveTab] = useState(0);
+  const [TrailerTab, setTrailerTab] = useState(true);
+
   const tabsRef = useRef(null);
   const options = [
     { name: 'option1', label: 'Yes' },
@@ -30,42 +32,52 @@ export default function VehiclesEdit() {
     image: 'Cupra',
     model: 'Cupra Formentor 2022',
     info: 'WHITE 2.5 287 kW',
+    type: 'A',
     afiPlate: 'AFI N-23456',
     coverPlate: 'EP178GN',
     expiration: '02/22/2024',
+    fiscal: 'P',
   };
   const vehicle_2 = {
     image: 'Gla',
     model: 'Mercedes Benz GLA 2021',
     info: 'BLACK 2.2 165KW',
+    type: 'A',
     afiPlate: 'AFI 2N-26333',
     coverPlate: 'EC728TT',
     expiration: '10/22/2023',
+    fiscal: 'S',
   };
   const vehicle_3 = {
     image: 'DS4',
     model: 'DS4 Cross Rivoli 2022',
     info: 'GOLD 1.5 105KW',
+    type: 'A',
     afiPlate: 'AFI 2N-11223',
     coverPlate: 'EX128XX',
     expiration: '02/08/2023',
+    fiscal: 'S',
   };
   const vehicle_4 = {
     image: 'Trailer',
     model: 'La Mancelle',
     info: 'Liberty 440PC',
+    type: 'R',
     afiPlate: 'AFI 2N-33442',
     coverPlate: 'PN311AX',
     expiration: '02/08/2023',
+    fiscal: 'S',
   };
 
   const vehicle_5 = {
     image: 'Moped',
     model: 'Ruckus 2018',
     info: '49CC',
+    type: 'X',
     afiPlate: 'N346',
     coverPlate: 'X72J2Z',
     expiration: '08/28/2023',
+    fiscal: 'S',
   };
   const handleClick = (event) => {};
   return (
@@ -214,11 +226,13 @@ export default function VehiclesEdit() {
                   <VehicleCard
                     options={vehicle_1}
                     setShowDismissModal={setShowDismissModal}
+                    setTrailerTab={setTrailerTab}
                   />
                   <div className="h-5 w-5 bg-gray-200 border-gray-400 border-b-2 border-t-2"></div>
                   <VehicleCard
                     options={vehicle_4}
                     setShowDismissModal={setShowDismissModal}
+                    setTrailerTab={setTrailerTab}
                   />
                 </div>
                 <VehicleCard
@@ -887,7 +901,7 @@ export default function VehiclesEdit() {
                           <div className="col-span-2"></div>
                         </div>
                       </Tabs.Item>
-                      <Tabs.Item title="Trailer Link">
+                      <Tabs.Item title="Trailer Link" disabled={TrailerTab}>
                         <select>
                           <option value="">Cupra Formentor 2022</option>
                           <option value="">Mercedes Benz GLA</option>
