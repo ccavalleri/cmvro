@@ -10,6 +10,9 @@ export default function Layout({ children }) {
     showNoteButton: false,
   });
 
+  const d = new Date();
+  let year = d.getFullYear();
+
   function handleResize() {
     if (innerWidth <= 640) {
       setShowNav(false);
@@ -32,7 +35,7 @@ export default function Layout({ children }) {
 
   return (
     <div>
-      <Header showNav={showNav} showNoteButton={ userInterface.showNoteButton} />
+      <Header showNav={showNav} showNoteButton={userInterface.showNoteButton} />
       <Transition
         as={Fragment}
         show={showNav}
@@ -43,7 +46,7 @@ export default function Layout({ children }) {
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
       >
-        <SideBar showNav={showNav} setUserInterface={setUserInterface}  />
+        <SideBar showNav={showNav} setUserInterface={setUserInterface} />
       </Transition>
       <main
         className={`pt-2 transition-all duration-[400ms] ${
@@ -51,6 +54,18 @@ export default function Layout({ children }) {
         }`}
       >
         {children}
+        <div className="px-11 mx-5 mt-2 text-gray-500 text-md">
+          <div className="flex justify-between">
+            <div className="border border-gray-300 shadow-sm px-2 rounded-lg">
+              Unclassified Information - For Official Use Only
+            </div>
+            <div className="border border-gray-300 shadow-sm px-2 rounded-lg">
+              CMVRO 3.0 
+              <span className="ml-2 border-gray-400 border-l-2 px-1">CCS</span>
+              <span className="border-gray-400 border-l-2 px-2">©{year}</span>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
