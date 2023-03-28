@@ -28,7 +28,7 @@ export default function VehicleCard({
   return (
     <div
       id={id}
-      className={`max-w-sm bg-white ${cardBorder} border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-blue-400 hover:shadow-lg cursor-pointer`}
+      className={`max-w-sm bg-white ${cardBorder} border-slate-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-cyan-500/50 cursor-pointer`}
       onClick={vehicleselected}
     >
       <div className="grid grid-cols-3">

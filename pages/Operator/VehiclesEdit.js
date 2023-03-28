@@ -37,8 +37,8 @@ export default function VehiclesEdit() {
     { name: 'option2', label: 'No' },
   ];
   const vehicle_1 = {
-    image: 'Cupra',
-    model: 'Cupra Formentor 2022',
+    "image": 'Cupra',
+    "model": 'Cupra Formentor 2022',
     info: 'WHITE 2.5 287 kW',
     type: 'A',
     afiPlate: 'AFI N-23456',
