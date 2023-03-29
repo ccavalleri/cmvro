@@ -567,7 +567,7 @@ export default function SiteManager() {
                         <tbody className="">
                           {users.map(function (user) {
                             return (
-                              <tr key={user.LastName} className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 ">
+                              <tr key={user.LastName} className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 cursor-pointer ">
                                 <td className="whitespace-nowrap px-1 py-3 font-medium w-56">
                                 {user.LastName}
                                 </td>
