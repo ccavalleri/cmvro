@@ -221,8 +221,8 @@ export default function ModalWindow({ show, onCloseDismiss }) {
                 </p>
                 <ul className="pl-1 list-disc border-t-2 border-b-2">
                   <li className="ml-7 py-1">
-                    The "dichiarazione per l'importazione in franchigia di
-                    autoveicoli ai sensi della convenzione di Londra"{' '}
+                    The dichiarazione per l&apos;importazione in franchigia di
+                    autoveicoli ai sensi della convenzione di Londra{' '}
                   </li>
                   <li className="ml-7 py-1">
                     The AFI Military Registration and Certificate of Title of
