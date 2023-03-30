@@ -203,21 +203,44 @@ export default function ModalWindow({ show, onCloseDismiss }) {
                   </div>
                 </div>
               </div>
-              <div className="mt-2 border border-gray-200 rounded-lg py-2 text-slate-600">
+              <div className="mt-2 border border-gray-200 rounded-lg py-2 text-slate-700">
                 <p className="pl-1">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&apos;s
-                  standard dummy text ever since the 1500s,when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.{' '}
+                  MVROs can register vehicles purchased from dealers when stored
+                  in{' '}
+                  <span className="font-bold">
+                    Italian Customs Approved Bonded Warehouses.
+                  </span>
                 </p>
                 <p className="pl-1">
-                  It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged.
-                  It was popularised in the 1960s with the release of Letraset
-                  sheets containing Lorem Ipsum passages, and more recently with
-                  desktop publishing software like Aldus PageMaker including
-                  versions of Lorem Ipsum.
+                  The MVRO will register the vehicle and issue two original
+                  registration documents and license plates to the sponsor.{' '}
+                </p>
+                <p className="pl-1 mt-1">
+                  The sponsor reports to the bonded warehouse to pick up the
+                  vehicle with following documentation:
+                </p>
+                <ul className="pl-1 list-disc border-t-2 border-b-2">
+                  <li className="ml-7 py-1">
+                    The "dichiarazione per l'importazione in franchigia di
+                    autoveicoli ai sensi della convenzione di Londra"{' '}
+                  </li>
+                  <li className="ml-7 py-1">
+                    The AFI Military Registration and Certificate of Title of
+                    Motor Vehicle
+                  </li>
+                  <li className="ml-7 py-1">
+                    A copy of the IMZ/IMA Customs Form{' '}
+                  </li>
+                </ul>
+                <p className="pl-1 mt-1">
+                  The sponsor will obtain a receipt for the vehicle, and will
+                  immediately return to the MVRO with the vehicle and a copy of
+                  the IMA Customs Form. A VIN check will be accomplished to
+                  ensure accuracy.
+                </p>
+                <p className="pl-1">
+                  All tax-free fuel/vehicle registration privileges will be
+                  suspended until the process is completed.
                 </p>
               </div>
             </div>
