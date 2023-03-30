@@ -203,7 +203,7 @@ export default function ModalWindow({ show, onCloseDismiss }) {
                   </div>
                 </div>
               </div>
-              <div className="mt-2 border border-gray-200 rounded-lg py-2 text-slate-700">
+              <div className="mt-2 border border-gray-200 rounded-lg py-2 text-blue-600 bg-blue-50 shadow">
                 <p className="pl-1">
                   MVROs can register vehicles purchased from dealers when stored
                   in{' '}
@@ -219,7 +219,7 @@ export default function ModalWindow({ show, onCloseDismiss }) {
                   The sponsor reports to the bonded warehouse to pick up the
                   vehicle with following documentation:
                 </p>
-                <ul className="pl-1 list-disc border-t-2 border-b-2">
+                <ul className="pl-1 list-disc">
                   <li className="ml-7 py-1">
                     The dichiarazione per l&apos;importazione in franchigia di
                     autoveicoli ai sensi della convenzione di Londra{' '}
