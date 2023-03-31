@@ -203,7 +203,7 @@ export default function ModalWindow({ show, onCloseDismiss }) {
                   </div>
                 </div>
               </div>
-              <div className="mt-2 border border-gray-200 rounded-lg py-2 text-blue-600 bg-blue-50 shadow">
+              <div className="mt-2 border border-blue-200 rounded-lg px-1 py-2 text-blue-600 bg-blue-50 shadow">
                 <p className="pl-1">
                   MVROs can register vehicles purchased from dealers when stored
                   in{' '}

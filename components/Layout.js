@@ -60,7 +60,7 @@ export default function Layout({ children }) {
               Unclassified Information - For Official Use Only
             </div>
             <div className="border border-gray-300 shadow-sm px-2 rounded-lg">
-              CMVRO 3.0 
+              CMVRO CLOUD
               <span className="ml-2 border-gray-400 border-l-2 px-1">CCS</span>
               <span className="border-gray-400 border-l-2 px-2">©{year}</span>
             </div>
