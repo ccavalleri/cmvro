@@ -1,13 +1,13 @@
-import Body from '../../components/Body';
+import Body from '../../../components/Body';
 import Image from 'next/image';
 import Webcam from 'react-webcam';
-import Avatar from '../../public/avatar.jpg';
+import Avatar from '../../../public/avatar.jpg';
 import { useState } from 'react';
-import Inputfield from '../../components/form/Inputfield';
+import Inputfield from '../../../components/form/Inputfield';
 import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
-import InputfieldIcon from '../../components/form/InputfieldIcon';
-import RadioBox from '../../components/form/RadioBox';
-import DriverLicenseCard from '../../components/ui/DriverLicenseCard';
+import InputfieldIcon from '../../../components/form/InputfieldIcon';
+import RadioBox from '../../../components/form/RadioBox';
+import DriverLicenseCard from '../../../components/ui/DriverLicenseCard';
 
 export default function DriverLicense() {
   const [ImageExist, setImageExist] = useState(true);
