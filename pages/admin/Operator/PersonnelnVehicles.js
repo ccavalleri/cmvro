@@ -1,8 +1,8 @@
-import Body from '../../components/Body';
+import Body from '../../../components/Body';
 import Image from 'next/image';
-import Avatar from '../../public/avatar.jpg';
-import Inputfield from '../../components/form/Inputfield';
-import VehicleList from '../../components/ui/VehicleList';
+import Avatar from '../../../public/avatar.jpg';
+import Inputfield from '../../../components/form/Inputfield';
+import VehicleList from '../../../components/ui/VehicleList';
 import { useState } from 'react';
 import Link from 'next/link';
 

@@ -1,21 +1,21 @@
-import Body from '../../components/Body';
+import Body from '../../../components/Body';
 import Image from 'next/image';
-import Avatar from '../../public/avatar.jpg';
-import Cupra from '../../public/cupra-formentor.png';
-import Gla from '../../public/gla.jpeg';
-import DS4 from '../../public/ds4.jpeg';
-import Trailer from '../../public/trailer.jpg';
+import Avatar from '../../../public/avatar.jpg';
+import Cupra from '../../../public/cupra-formentor.png';
+import Gla from '../../../public/gla.jpeg';
+import DS4 from '../../../public/ds4.jpeg';
+import Trailer from '../../../public/trailer.jpg';
 
-import Inputfield from '../../components/form/Inputfield';
+import Inputfield from '../../../components/form/Inputfield';
 import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
-import InputfieldIcon from '../../components/form/InputfieldIcon';
+import InputfieldIcon from '../../../components/form/InputfieldIcon';
 import Link from 'next/link';
-import RadioBox from '../../components/form/RadioBox';
-import ModalWindow from '../../components/form/ModalWindow';
-import { Tabs } from '../../node_modules/flowbite-react/lib/cjs/components/Tab';
-import { Button } from '../../node_modules/flowbite-react/lib/cjs/components/Button';
+import RadioBox from '../../../components/form/RadioBox';
+import ModalWindow from '../../../components/form/ModalWindow';
+import { Tabs } from 'flowbite-react/lib/cjs/components/Tab';
+import { Button } from 'flowbite-react/lib/cjs/components/Button';
 import { useState, useRef } from 'react';
-import VehicleCard from '../../components/ui/VehicleCard';
+import VehicleCard from '../../../components/ui/VehicleCard';
 
 export default function VehiclesEdit() {
   const [showDismissModal, setShowDismissModal] = useState(false);
@@ -37,8 +37,8 @@ export default function VehiclesEdit() {
     { name: 'option2', label: 'No' },
   ];
   const vehicle_1 = {
-    "image": 'Cupra',
-    "model": 'Cupra Formentor 2022',
+    image: 'Cupra',
+    model: 'Cupra Formentor 2022',
     info: 'WHITE 2.5 287 kW',
     type: 'A',
     afiPlate: 'AFI N-23456',

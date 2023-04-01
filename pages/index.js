@@ -1,4 +1,4 @@
-import Dashboard from './Viewer/Dashboard';
+import Dashboard from './admin/Viewer/Dashboard';
 
 export default function Home() {
   return (

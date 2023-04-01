@@ -1,5 +1,5 @@
-import Body from '../../components/Body';
-import users from '../../data/operators.json';
+import Body from '../../../components/Body';
+import users from '../../../data/operators.json';
 
 export default function SiteManager() {
   return (

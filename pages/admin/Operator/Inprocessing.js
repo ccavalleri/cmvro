@@ -1,5 +1,5 @@
-import Body from '../../components/Body';
-import Inputfield from '../../components/form/Inputfield';
+import Body from '../../../components/Body';
+import Inputfield from '../../../components/form/Inputfield';
 import { useState } from 'react';
 
 export default function Inprocessing() {

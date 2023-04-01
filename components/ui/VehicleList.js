@@ -136,7 +136,7 @@ export default function VehicleList({}) {
       </table>
       <div>
         <Link
-          href="/Operator/VehiclesEdit"
+          href="/admin/Operator/VehiclesEdit"
           className="text-gray-500 px-2 py-1 text-md rounded-lg bg-slate-200 mb-1 hover:bg-gray-300"
         >
           Edit all

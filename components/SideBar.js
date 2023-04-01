@@ -1,7 +1,12 @@
 import { forwardRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ClipboardIcon, PencilIcon, SearchIcon,setUserInterface } from '@heroicons/react/solid';
+import {
+  ClipboardIcon,
+  PencilIcon,
+  SearchIcon,
+  setUserInterface,
+} from '@heroicons/react/solid';
 import { useRouter } from 'next/router';
 
 import {
@@ -37,77 +42,77 @@ import { Bars4Icon } from '@heroicons/react/solid';
 
 const OperatorItems = [
   {
-    name: 'Waiting List',
-    url: '/Operator/Waiting',
+    name: 'Appointment List',
+    url: '/admin/Operator/Waiting',
     icon: <CalendarIcon className="h-7 w-7" />,
-    noteButton: false
+    noteButton: false,
   },
   {
     name: 'Inprocessing',
-    url: '/Operator/Inprocessing',
+    url: '/admin/Operator/Inprocessing',
     icon: <UserAddIcon className="h-7 w-7" />,
-    noteButton: true
+    noteButton: true,
   },
   {
     name: 'Personnel and Vehicles',
-    url: '/Operator/PersonnelnVehicles',
+    url: '/admin/Operator/PersonnelnVehicles',
     icon: <InboxIcon className="h-7 w-7" />,
-    noteButton: true
+    noteButton: true,
   },
   {
     name: 'Outprocessing',
-    url: '/Operator/Outprocessing',
+    url: '/admin/Operator/Outprocessing',
     icon: <UserRemoveIcon className="h-7 w-7" />,
-    noteButton: true
+    noteButton: true,
   },
   {
     name: 'Tag Tracker',
-    url: '/Operator/Tagtracker',
+    url: '/admin/Operator/Tagtracker',
     icon: <TagIcon className="h-7 w-7" />,
-    noteButton: false
+    noteButton: false,
   },
   {
     name: 'Forms and Reports',
-    url: '/Operator/FormsnReports',
+    url: '/admin/Operator/FormsnReports',
     icon: <DocumentDuplicateIcon className="h-7 w-7" />,
-    noteButton: false
+    noteButton: false,
   },
   {
     name: 'Sponsor Audit',
-    url: '/Operator/SponsorAudit',
+    url: '/admin/Operator/SponsorAudit',
     icon: <UsersIcon className="h-7 w-7" />,
-    noteButton: false
+    noteButton: false,
   },
 ];
 const AdministratorItems = [
   {
     name: 'Admin Log',
-    url: '/Administrator/AdminLog',
+    url: '/admin/Administrator/AdminLog',
     icon: <ChartSquareBarIcon className="h-7 w-7" />,
   },
   {
     name: 'Foundation Data',
-    url: '/Administrator/FoundationData',
+    url: '/admin/Administrator/FoundationData',
     icon: <OfficeBuildingIcon className="h-7 w-7" />,
   },
   {
     name: 'Administrative Functions',
-    url: '/Administrator/AdminFunc',
+    url: '/admin/Administrator/AdminFunc',
     icon: <BriefcaseIcon className="h-7 w-7" />,
   },
   {
     name: 'Approver Functions',
-    url: '/Administrator/ApproverFunc',
+    url: '/admin/Administrator/ApproverFunc',
     icon: <LockOpenIcon className="h-7 w-7" />,
   },
   {
     name: 'Supervisor Reports',
-    url: '/Administrator/SupervReports',
+    url: '/admin/Administrator/SupervReports',
     icon: <DocumentReportIcon className="h-7 w-7" />,
   },
   {
     name: 'Advanced Reports',
-    url: '/Administrator/AdvancedReports',
+    url: '/admin/Administrator/AdvancedReports',
     icon: <ClipboardListIcon className="h-7 w-7" />,
   },
 ];
@@ -115,17 +120,17 @@ const AdministratorItems = [
 const CadministratorItems = [
   {
     name: 'MOI Report',
-    url: '/CentralAdministrator/MOIreports',
+    url: '/admin/CentralAdministrator/MOIreports',
     icon: <TableIcon className="h-7 w-7" />,
   },
   {
     name: 'Site Manager',
-    url: '/CentralAdministrator/SiteManager',
+    url: '/admin/CentralAdministrator/SiteManager',
     icon: <IdentificationIcon className="h-7 w-7" />,
   },
   {
     name: 'Vehicle Functions',
-    url: '/CentralAdministrator/VehicleFunctions',
+    url: '/admin/CentralAdministrator/VehicleFunctions',
     icon: <TruckIcon className="h-7 w-7" />,
   },
 ];
@@ -151,7 +156,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
             ></Image>
           </div>
           <div className="leading-none text-white text-lg ml-2">
-            <Link href="/Viewer/Profile">
+            <Link href="/admin/Viewer/Profile">
               <div className="mb-1">
                 <strong
                   className="hover:bg-sky-700"
@@ -178,7 +183,7 @@ const SideBar = forwardRef(({ showNav }, ref) => {
         <div className="pl-2 text-gray-200 mt-2 flex bg-slate-700 md-shadow">
           Viewer
         </div>
-        <Link href="/Viewer/Dashboard">
+        <Link href="/admin/Viewer/Dashboard">
           <div
             className={`pl-3 py-1 mx-2 pt-2 rounded text-center cursor-pointer flex items-center transition-colors ${
               router.pathname == '/'
