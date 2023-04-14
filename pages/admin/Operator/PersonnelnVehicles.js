@@ -23,10 +23,7 @@ export default function PersonnelnVehicles() {
         </div>
         <div>
           <form>
-            <label
-              for="default-search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-            >
+            <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
               Search
             </label>
             <div className="relative">
