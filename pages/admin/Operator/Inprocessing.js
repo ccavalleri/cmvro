@@ -1,6 +1,7 @@
 import Body from '../../../components/Body';
 import Inputfield from '../../../components/form/Inputfield';
 import { useState } from 'react';
+import Layout from '../../../components/Layout';
 
 export default function Inprocessing() {
   /* const inputfield = () => {
@@ -180,3 +181,7 @@ export default function Inprocessing() {
     </div>
   );
 }
+
+Inprocessing.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};
