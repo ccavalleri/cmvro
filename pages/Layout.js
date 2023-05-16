@@ -6,19 +6,19 @@ export default function Layout({ children }) {
     <>
       <nav
         id="header"
-        className="fixed w-full z-30 top-0 text-white bg-blue-700"
+        className="fixed w-full z-30 top-0 text-white bg-sky-700"
       >
-        <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
           <div className="pl-4 flex items-center ">
             <a
               className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-blue-200"
               href="#"
             >
-              C<span className="text-base text-white">entral</span> M
-              <span className="text-base text-white">otor</span> V
-              <span className="text-base text-white">ehicle</span> R
-              <span className="text-base text-white">egistration</span> O
-              <span className="text-base text-white">ffice</span>
+              C<span className="text-2xl text-white">entral</span> M
+              <span className="text-2xl text-white">otor</span> V
+              <span className="text-2xl text-white">ehicle</span> R
+              <span className="text-2xl text-white">egistration</span> O
+              <span className="text-2xl text-white">ffice</span>
             </a>
           </div>
           <div className="block lg:hidden pr-4">
@@ -68,7 +68,7 @@ export default function Layout({ children }) {
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
       </nav>
 
-      <div className="pt-24 bg-gradient-to-r from-blue-500">
+      <div className="pt-24 bg-gradient-to-r from-cyan-500">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center h-[500px] pb-3 ">
           {/*<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <p className="uppercase tracking-loose w-full">
@@ -100,7 +100,7 @@ export default function Layout({ children }) {
         <svg
           viewBox="0 0 1428 174"
           version="1.1"
-          className="bg-gradient-to-r from-blue-500"
+          className="bg-gradient-to-r from-cyan-500"
         >
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g
@@ -108,7 +108,7 @@ export default function Layout({ children }) {
               fill="#FFFFFF"
               fill-rule="nonzero"
             >
-              <path
+              {/*<path
                 d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
                 opacity="0.100000001"
               ></path>
@@ -120,7 +120,7 @@ export default function Layout({ children }) {
                 d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
                 id="Path-4"
                 opacity="0.200000003"
-              ></path>
+        ></path> */}
             </g>
             <g
               transform="translate(-4.000000, 76.000000)"
@@ -135,7 +135,7 @@ export default function Layout({ children }) {
       <section className="bg-white border-b py-8">
         <div className="container max-w-6xl mx-auto m-8">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-           Complete the most online, visit for conclusion
+            Complete the most online, visit for conclusion
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -436,7 +436,7 @@ export default function Layout({ children }) {
               </svg>
             </div>
           </div>
-          <div className="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div className="flex flex-wrap flex-col-reverse sm:flex-row mt-5">
             <div className="w-full sm:w-1/2 p-6 mt-6">
               <svg
                 className="w-5/6 sm:h-64 mx-auto"
@@ -600,7 +600,8 @@ export default function Layout({ children }) {
                   Office Locations
                 </h3>
                 <p className="text-gray-600 mb-8">
-                  MVRO Offices are spread across the Italian peninsula. Find the one that fit your necessity.
+                  MVRO Offices are spread across the Italian peninsula. Find the
+                  one that fit your necessity.
                   <br />
                   <br />
                   Images from:
@@ -619,7 +620,7 @@ export default function Layout({ children }) {
       <section className="bg-white border-b py-8">
         <div className="container mx-auto flex flex-wrap pt-4 pb-12">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-           What do you want to accomplish today?
+            What do you want to accomplish today?
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -630,9 +631,7 @@ export default function Layout({ children }) {
                 href="#"
                 className="flex flex-wrap no-underline hover:no-underline"
               >
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                 
-                </p>
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
                   Profile Creation
                 </div>
@@ -642,6 +641,7 @@ export default function Layout({ children }) {
                 </p>
               </a>
             </div>
+
             <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
               <div className="flex items-center justify-start">
                 <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
@@ -656,11 +656,9 @@ export default function Layout({ children }) {
                 href="#"
                 className="flex flex-wrap no-underline hover:no-underline"
               >
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                 
-                </p>
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
-                Vehicle Registration
+                  Vehicle Registration
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -682,9 +680,79 @@ export default function Layout({ children }) {
                 href="#"
                 className="flex flex-wrap no-underline hover:no-underline"
               >
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                <div className="w-full font-bold text-xl text-gray-800 px-6">
+                  Driver License Information
+                </div>
+                <p className="text-gray-800 text-base px-6 mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
                 </p>
+              </a>
+            </div>
+            <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div className="flex items-center justify-end">
+                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  Action
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+              <a
+                href="#"
+                className="flex flex-wrap no-underline hover:no-underline"
+              >
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                <div className="w-full font-bold text-xl text-gray-800 px-6">
+                  Driver License Information
+                </div>
+                <p className="text-gray-800 text-base px-6 mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                </p>
+              </a>
+            </div>
+            <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div className="flex items-center justify-end">
+                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  Action
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+              <a
+                href="#"
+                className="flex flex-wrap no-underline hover:no-underline"
+              >
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                <div className="w-full font-bold text-xl text-gray-800 px-6">
+                  Driver License Information
+                </div>
+                <p className="text-gray-800 text-base px-6 mb-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                </p>
+              </a>
+            </div>
+            <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div className="flex items-center justify-end">
+                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                  Action
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+              <a
+                href="#"
+                className="flex flex-wrap no-underline hover:no-underline"
+              >
+                <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
                   Driver License Information
                 </div>
@@ -811,24 +879,6 @@ export default function Layout({ children }) {
                 className="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
                 href="#"
               >
-                <svg
-                  className="h-8 fill-current inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512.005 512.005"
-                >
-                  <rect
-                    fill="#2a2a31"
-                    x="16.539"
-                    y="425.626"
-                    width="479.767"
-                    height="50.502"
-                    transform="matrix(1,0,0,1,0,0)"
-                  />
-                  <path
-                    className="plane-take-off"
-                    d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
-                  />
-                </svg>
                 CMVRO
               </a>
             </div>
