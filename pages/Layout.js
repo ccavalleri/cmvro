@@ -11,10 +11,14 @@ export default function Layout({ children }) {
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           <div className="pl-4 flex items-center ">
             <a
-              className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+              className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-blue-200"
               href="#"
             >
-              CMVRO
+              C<span className="text-base text-white">entral</span> M
+              <span className="text-base text-white">otor</span> V
+              <span className="text-base text-white">ehicle</span> R
+              <span className="text-base text-white">egistration</span> O
+              <span className="text-base text-white">ffice</span>
             </a>
           </div>
           <div className="block lg:hidden pr-4">
@@ -27,8 +31,8 @@ export default function Layout({ children }) {
             className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
             id="nav-content"
           >
-             <ul className="list-reset lg:flex justify-end flex-1 items-center">
-            {/* <li className="mr-3">
+            <ul className="list-reset lg:flex justify-end flex-1 items-center">
+              {/* <li className="mr-3">
                 <a
                   className="inline-block py-2 px-4 text-black font-bold no-underline"
                   href="#"
@@ -52,12 +56,12 @@ export default function Layout({ children }) {
                   link
                 </a>
               </li>*/}
-  </ul> 
+            </ul>
             <button
               id="navAction"
               className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
-              Log In
+              My CMVRO
             </button>
           </div>
         </div>
@@ -84,8 +88,7 @@ export default function Layout({ children }) {
 */}
 
           <Carousel>
-          
-            <img src="Napoli.jpg" className='h-fit' />
+            <img src="Napoli.jpg" className="h-fit" />
           </Carousel>
 
           {/* <div className="w-full md:w-3/5 py-6 text-center">
@@ -130,9 +133,9 @@ export default function Layout({ children }) {
         </svg>
       </div>
       <section className="bg-white border-b py-8">
-        <div className="container max-w-5xl mx-auto m-8">
+        <div className="container max-w-6xl mx-auto m-8">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Title
+           Complete the most online, visit for conclusion
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -140,23 +143,26 @@ export default function Layout({ children }) {
           <div className="flex flex-wrap">
             <div className="w-5/6 sm:w-1/2 p-6">
               <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Lorem ipsum dolor sit amet
+                Online Services
               </h3>
               <p className="text-gray-600 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
+                With MVRO offices serving a limited number of customers,
+                providing services online is crucial. From renewing vehicle
+                registration to changing your address, or driver’s license
+                renewal (and much more), we’re continually adding new online
+                services to meet your needs.
                 <br />
                 <br />
-                Images from:
+                {/*Images from:
                 <a
                   className="text-pink-500 underline"
                   href="https://undraw.co/"
                 >
                   undraw.co
-                </a>
+                </a>*/}
               </p>
             </div>
-            <div className="w-full sm:w-1/2 p-6">
+            <div className="w-32 h-32 sm:w-1/2 p-6 ">
               <svg
                 className="w-full sm:h-64 mx-auto"
                 viewBox="0 0 1177 598.5"
@@ -591,11 +597,10 @@ export default function Layout({ children }) {
             <div className="w-full sm:w-1/2 p-6 mt-6">
               <div className="align-middle">
                 <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                  Lorem ipsum dolor sit amet
+                  Office Locations
                 </h3>
                 <p className="text-gray-600 mb-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  MVRO Offices are spread across the Italian peninsula. Find the one that fit your necessity.
                   <br />
                   <br />
                   Images from:
@@ -614,7 +619,7 @@ export default function Layout({ children }) {
       <section className="bg-white border-b py-8">
         <div className="container mx-auto flex flex-wrap pt-4 pb-12">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Title
+           What do you want to accomplish today?
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -626,10 +631,10 @@ export default function Layout({ children }) {
                 className="flex flex-wrap no-underline hover:no-underline"
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
+                 
                 </p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
-                  Lorem ipsum dolor sit amet.
+                  Profile Creation
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -652,10 +657,10 @@ export default function Layout({ children }) {
                 className="flex flex-wrap no-underline hover:no-underline"
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
+                 
                 </p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
-                  Lorem ipsum dolor sit amet.
+                Vehicle Registration
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -678,10 +683,10 @@ export default function Layout({ children }) {
                 className="flex flex-wrap no-underline hover:no-underline"
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
+                  
                 </p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6">
-                  Lorem ipsum dolor sit amet.
+                  Driver License Information
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -824,7 +829,7 @@ export default function Layout({ children }) {
                     d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
                   />
                 </svg>
-               CMVRO
+                CMVRO
               </a>
             </div>
             <div className="flex-1">
