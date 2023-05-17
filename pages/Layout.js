@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'flowbite-react/lib/cjs/components/Carousel';
+import { UserCircleIcon } from '@heroicons/react/solid';
 
 export default function Layout({ children }) {
   return (
@@ -8,18 +9,27 @@ export default function Layout({ children }) {
         id="header"
         className="fixed w-full z-30 top-0 text-white bg-sky-700"
       >
-        <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
-          <div className="pl-4 flex items-center ">
-            <a
-              className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-blue-200"
-              href="#"
-            >
-              C<span className="text-2xl text-white">entral</span> M
+        <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+          <div className="pl-4 grid grid-cols-1 items-center">
+            <div className="text-sm text-center bg-sky-600 opacity-95">
+              Allied Forces Italy
+            </div>
+            <div className="border border-sky-600 text-center">
+              <a
+                className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-sky-100"
+                href="#"
+              >
+                AFI <span className="text-blue-100">DMV</span>
+                {/* C<span className="text-2xl text-white">entral</span> M
               <span className="text-2xl text-white">otor</span> V
               <span className="text-2xl text-white">ehicle</span> R
               <span className="text-2xl text-white">egistration</span> O
-              <span className="text-2xl text-white">ffice</span>
-            </a>
+  <span className="text-2xl text-white">ffice</span> */}
+              </a>
+            </div>
+            <div className="text-sm text-center bg-sky-600 px-1 opacity-95">
+              Department of Motor Vehicles
+            </div>
           </div>
           <div className="block lg:hidden pr-4">
             <button
@@ -57,11 +67,12 @@ export default function Layout({ children }) {
                 </a>
               </li>*/}
             </ul>
+            <UserCircleIcon className="h-9 w-9 text-white" />
             <button
               id="navAction"
-              className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              className="mx-auto lg:mx-0 text-xl text-white font-bold mt-4 lg:mt-0 py-2 px-1 opacity-90 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
-              My CMVRO
+              MyAFIDMV
             </button>
           </div>
         </div>
@@ -998,9 +1009,7 @@ export default function Layout({ children }) {
           <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
 
           <div class="flex flex-col items-center justify-between sm:flex-row">
-            <a href="#">
-              CMVRO
-            </a>
+            <a href="#">CMVRO</a>
 
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
               © Copyright 2023. All Rights Reserved.
