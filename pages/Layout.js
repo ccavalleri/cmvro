@@ -7,14 +7,14 @@ export default function Layout({ children }) {
     <>
       <nav
         id="header"
-        className="fixed w-full z-30 top-0 text-white bg-sky-700 border-sky-800 border-bottom-5"
+        className="fixed w-full z-30 top-0 text-white bg-sky-700 shadow-lg"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           <div className="pl-4 grid grid-cols-1 items-center">
-            <div className="text-xs text-center text-black text-center bg-sky-300 opacity-95">
+            <div className="text-xs text-center text-zinc-800 text-center bg-gradient-to-r from-sky-200 to-sky-600 opacity-95 shadow">
               Allied Forces in Italy
             </div>
-            <div className="border border-sky-600 text-center bg-gradient-to-r from-sky-700 to-cyan-600">
+            <div className="border border-sky-600 text-center bg-gradient-to-b from-sky-500 to-sky-700 shadow-inner">
               <a
                 className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-sky-100 leading-tight drop-shadow-xl"
                 href="#"
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
   <span className="text-2xl text-white">ffice</span> */}
               </a>
             </div>
-            <div className="text-xs text-center text-black bg-sky-300 px-1 opacity-95">
+            <div className="text-xs text-center text-zinc-800  bg-gradient-to-l from-sky-200 to-sky-600 px-1 opacity-95 shadow">
               Department of Motor Vehicles
             </div>
           </div>
@@ -173,12 +173,12 @@ export default function Layout({ children }) {
               </p>
             </div>
             <div className="w-32 h-32 sm:w-1/2 p-6 ">
-            <img src="landing_page_img.png"/>
+              <img src="landing_page_img_1.png" />
             </div>
           </div>
           <div className="flex flex-wrap flex-col-reverse sm:flex-row mt-9">
             <div className="w-full flex sm:w-1/2 p-2 mt-6 justify-end">
-             <img src='landing_page_img_3_4.png'/>
+              <img src="landing_page_img_3_4.png" />
             </div>
             <div className="w-full sm:w-1/2 p-6 mt-6">
               <div className="mt-5">
@@ -186,8 +186,8 @@ export default function Layout({ children }) {
                   Offices Locations
                 </h3>
                 <p className="text-gray-600 mb-8">
-                  AFI DMV Offices are spread across the Italian peninsula. Find the
-                  one closest to you.
+                  AFI DMV offices are spread across the Italian peninsula. Find
+                  the one closest to you.
                   <br />
                   <br />
                 </p>
@@ -588,7 +588,7 @@ export default function Layout({ children }) {
           <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
 
           <div class="flex flex-col items-center justify-between sm:flex-row">
-            <a href="#">CMVRO</a>
+            <a href="#">AFI DMV</a>
 
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
               © Copyright 2023. All Rights Reserved.
