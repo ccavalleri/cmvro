@@ -14,9 +14,9 @@ export default function Layout({ children }) {
             <div className="text-xs text-center text-black text-center bg-sky-300 opacity-95">
               Allied Forces in Italy
             </div>
-            <div className="border border-sky-600 text-center bg-sky-800">
+            <div className="border border-sky-600 text-center bg-gradient-to-r from-sky-700 to-cyan-600">
               <a
-                className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-sky-100"
+                className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-sky-100 leading-tight drop-shadow-xl"
                 href="#"
               >
                 AFI <span className="text-blue-100">DMV</span>
@@ -178,7 +178,7 @@ export default function Layout({ children }) {
           </div>
           <div className="flex flex-wrap flex-col-reverse sm:flex-row mt-9">
             <div className="w-full flex sm:w-1/2 p-2 mt-6 justify-end">
-             <img src='landing_page_img_3_3.png'/>
+             <img src='landing_page_img_3_4.png'/>
             </div>
             <div className="w-full sm:w-1/2 p-6 mt-6">
               <div className="mt-5">
