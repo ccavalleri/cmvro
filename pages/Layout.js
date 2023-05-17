@@ -14,7 +14,7 @@ export default function Layout({ children }) {
             <div className="text-xs text-center bg-sky-600 opacity-95">
               Allied Forces in Italy
             </div>
-            <div className="border border-sky-600 text-center">
+            <div className="border border-sky-600 text-center bg-sky-800">
               <a
                 className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-sky-100"
                 href="#"
