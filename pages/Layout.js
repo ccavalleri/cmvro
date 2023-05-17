@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           <div className="pl-4 grid grid-cols-1 items-center">
-            <div className="text-sm text-center bg-sky-600 opacity-95">
+            <div className="text-xs text-center bg-sky-600 opacity-95">
               Allied Forces in Italy
             </div>
             <div className="border border-sky-600 text-center">
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
   <span className="text-2xl text-white">ffice</span> */}
               </a>
             </div>
-            <div className="text-sm text-center bg-sky-600 px-1 opacity-95">
+            <div className="text-xs text-center bg-sky-600 px-1 opacity-95">
               Department of Motor Vehicles
             </div>
           </div>
