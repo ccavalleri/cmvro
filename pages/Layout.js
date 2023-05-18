@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         className="fixed w-full z-30 top-0 text-white bg-sky-700 shadow-lg"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-          <div className="grid grid-cols-1 items-center border-2 border-gray-300">
+          <div className="grid grid-cols-1 items-center border-2 border-gray-300 roundedgit"> 
             <div className="text-xs text-center tracking-wide text-zinc-100 text-center bg-gradient-to-r from-sky-400 to-sky-600 opacity-95 shadow">
               Allied Forces in Italy
             </div>
