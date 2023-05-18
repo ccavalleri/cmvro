@@ -10,11 +10,11 @@ export default function Layout({ children }) {
         className="fixed w-full z-30 top-0 text-white bg-sky-700 shadow-lg"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-          <div className="pl-4 grid grid-cols-1 items-center">
-            <div className="text-xs text-center text-zinc-800 text-center bg-gradient-to-r from-sky-200 to-sky-600 opacity-95 shadow">
+          <div className="grid grid-cols-1 items-center border-2 border-gray-300">
+            <div className="text-xs text-center tracking-wide text-zinc-100 text-center bg-gradient-to-r from-sky-400 to-sky-600 opacity-95 shadow">
               Allied Forces in Italy
             </div>
-            <div className="border border-sky-600 text-center bg-gradient-to-b from-sky-500 to-sky-700 shadow-inner">
+            <div className="border border-sky-600 text-center bg-gradient-to-b from-sky-500 to-sky-700">
               <a
                 className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-sky-100 leading-tight drop-shadow-xl"
                 href="#"
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
   <span className="text-2xl text-white">ffice</span> */}
               </a>
             </div>
-            <div className="text-xs text-center text-zinc-800  bg-gradient-to-l from-sky-200 to-sky-600 px-1 opacity-95 shadow">
+            <div className="text-xs text-center text-zinc-100  bg-gradient-to-l from-sky-500 to-sky-600 px-1 tracking-wide  opacity-95 shadow">
               Department of Motor Vehicles
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Layout({ children }) {
       </div>
       <section className="bg-white border-b py-8">
         <div className="container max-w-5xl mx-auto m-8">
-          <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-blue-800 shadow-xl rounded-xl py-3">
             Go Tech, complete the most online!
           </h2>
           <div className="w-full mb-4">
@@ -588,7 +588,7 @@ export default function Layout({ children }) {
           <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
 
           <div class="flex flex-col items-center justify-between sm:flex-row">
-            <a href="#">AFI DMV</a>
+            <a href="#" className='text-slate-600 text-medium font-bold'>AFI DMV</a>
 
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
               © Copyright 2023. All Rights Reserved.
