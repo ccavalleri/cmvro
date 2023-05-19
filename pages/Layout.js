@@ -218,9 +218,9 @@ export default function Layout({ children }) {
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
                   You will need to create an account in order to register your
                   POV and add your dependent members.
-                  <br/>
-                  <br/>
-                  <br/>
+                  <br />
+                  <br />
+                  <br />
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -271,11 +271,11 @@ export default function Layout({ children }) {
                   Driver&lsquo;s License Information
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
-                  In order for you to be issued an AFI driver's license, submit
-                  your information online and come to pick your official copy in
-                  one of AFI DMV office.
-                  <br/>
-                  <br/>
+                  In order for you to be issued an AFI driver&lsquo;s license,
+                  submit your information online and come to pick your official
+                  copy in one of AFI DMV office.
+                  <br />
+                  <br />
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -300,8 +300,8 @@ export default function Layout({ children }) {
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
                   We value you make the best use of your time and it allows us
-                  to serve you to the best. <br/>
-                  <br/>
+                  to serve you to the best. <br />
+                  <br />
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -326,8 +326,9 @@ export default function Layout({ children }) {
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
                   Sponsor may register dependent eligible to drive on the
-                  Italian territory by through the AFI DMV Online Services. <br/>
-                  <br/>
+                  Italian territory by through the AFI DMV Online Services.{' '}
+                  <br />
+                  <br />
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -585,7 +586,7 @@ export default function Layout({ children }) {
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Find your closest AFIDMV Office:
+                  Find your closest AFI DMV Office:
                 </a>
                 <a
                   href="#"
