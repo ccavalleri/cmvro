@@ -98,7 +98,7 @@ export default function Layout({ children }) {
           </div>
 */}
 
-          <Carousel className="mt-3 shadow-xl border rounded-xl w-full"> 
+          <Carousel className="mt-3 shadow-xl border rounded-xl w-full">
             <img src="Napoli.jpg" className="h-fit mt-3" />
           </Carousel>
 
@@ -179,7 +179,7 @@ export default function Layout({ children }) {
           </div>
           <div className="flex flex-wrap flex-col-reverse sm:flex-row mt-9">
             <div className="w-full flex sm:w-1/2 p-2 mt-6 justify-end  opacity-95">
-              <img src="landing_page_img_3_4.png"  />
+              <img src="landing_page_img_3_4.png" />
             </div>
             <div className="w-full sm:w-1/2 p-6 mt-6">
               <div className="mt-5">
@@ -213,11 +213,14 @@ export default function Layout({ children }) {
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6 mt-3">
-                  Profile Creation
+                  Sponsor Profile Creation
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  You will need to create an account in order to register your
+                  POV and add your dependent members.
+                  <br/>
+                  <br/>
+                  <br/>
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -238,11 +241,13 @@ export default function Layout({ children }) {
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6 mt-3">
-                  Vehicle Registration
+                  Motor Vehicle Registration
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  You are allowed to register up to three vehicles, which are
+                  free of customs duty and value added tax. Type I vehicle is
+                  also free of road taxes. All vehicles will be registered in
+                  the name of the sponsor.
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -263,11 +268,14 @@ export default function Layout({ children }) {
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6 mt-3">
-                  Driver License Information
+                  Driver&lsquo;s License Information
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  In order for you to be issued an AFI driver's license, submit
+                  your information online and come to pick your official copy in
+                  one of AFI DMV office.
+                  <br/>
+                  <br/>
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -288,11 +296,12 @@ export default function Layout({ children }) {
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6 mt-3">
-                  Plan an Appointment
+                  Make an Appointment
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  We value you make the best use of your time and it allows us
+                  to serve you to the best. <br/>
+                  <br/>
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -313,11 +322,12 @@ export default function Layout({ children }) {
               >
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6"></p>
                 <div className="w-full font-bold text-xl text-gray-800 px-6 mt-3">
-                  Dependent Management
+                  Dependent Registration
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Sponsor may register dependent eligible to drive on the
+                  Italian territory by through the AFI DMV Online Services. <br/>
+                  <br/>
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">
@@ -341,8 +351,9 @@ export default function Layout({ children }) {
                   Road Tax Payment
                 </div>
                 <p className="text-gray-800 text-base px-6 mb-5 mt-1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                  Type II vehicles (up to two) are subject to payment of road
+                  taxes established by the Italian Government. We give support
+                  for their calculation and payment.
                 </p>
               </a>
               <div className="flex items-center mt-5 mr-3 justify-end ">

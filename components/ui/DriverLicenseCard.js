@@ -2,6 +2,7 @@ import NatoLogo from '../../public/us-nato-logo.png';
 import Image from 'next/image';
 import Avatar from '../../public/avatar.jpg';
 import CnreLogo from '../../public/cneurafcent_logo.png';
+import Layout from '../Layout';
 
 export default function DriverLicenseCard({}) {
   return (
@@ -107,7 +108,7 @@ export default function DriverLicenseCard({}) {
                 In order to operate motor vehicles, the driver must carry the
                 following documents:
               </p>
-              <p>(a) The vehicle registration card;</p>  
+              <p>(a) The vehicle registration card;</p>
               <p>
                 (b) The valid driver&#39;s license for the corresponding
                 category of the vehicle;
@@ -122,3 +123,7 @@ export default function DriverLicenseCard({}) {
     </div>
   );
 }
+
+DriverLicenseCard.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};
