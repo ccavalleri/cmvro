@@ -545,7 +545,7 @@ export default function Layout({ children }) {
 
             <div>
               <p class="font-semibold text-gray-800 dark:text-white">
-                Driver's License
+                Driver&lsquo;s License
               </p>
 
               <div class="flex flex-col items-start mt-5 space-y-2">
