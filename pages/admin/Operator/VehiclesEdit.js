@@ -16,6 +16,7 @@ import { Tabs } from 'flowbite-react/lib/cjs/components/Tab';
 import { Button } from 'flowbite-react/lib/cjs/components/Button';
 import { useState, useRef } from 'react';
 import VehicleCard from '../../../components/ui/VehicleCard';
+import Layout from '../../../components/Layout';
 
 export default function VehiclesEdit() {
   const [showDismissModal, setShowDismissModal] = useState(false);
@@ -1052,3 +1053,7 @@ export default function VehiclesEdit() {
     </>
   );
 }
+
+VehiclesEdit.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

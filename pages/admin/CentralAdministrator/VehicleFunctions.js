@@ -1,4 +1,5 @@
 import Body from '../../../components/Body';
+import Layout from '../../../components/Layout';
 
 export default function VehicleFunctions() {
   return (
@@ -8,3 +9,7 @@ export default function VehicleFunctions() {
     </div>
   );
 }
+
+VehicleFunctions.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

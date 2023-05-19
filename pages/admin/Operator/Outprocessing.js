@@ -1,4 +1,5 @@
 import Body from '../../../components/Body';
+import Layout from '../../../components/Layout';
 
 export default function Outprocessing() {
   return (
@@ -9,3 +10,7 @@ export default function Outprocessing() {
     </div>
   );
 }
+
+Outprocessing.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

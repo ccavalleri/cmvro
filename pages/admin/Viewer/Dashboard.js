@@ -25,6 +25,8 @@ ChartJS.register(
 import { Line } from 'react-chartjs-2';
 import MyBar from '../../../components/charts/MyBar';
 import MyDoughnut from '../../../components/charts/MyDoughnut';
+import Layout from '../../../components/Layout';
+
 
 export default function Dashboard() {
   const data = {
@@ -90,3 +92,8 @@ export default function Dashboard() {
     </div>
   );
 }
+
+
+Dashboard.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

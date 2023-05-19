@@ -1,4 +1,5 @@
 import Body from '../../../components/Body';
+import Layout from '../../../components/Layout';
 
 export default function SupervReports() {
   return (
@@ -8,3 +9,7 @@ export default function SupervReports() {
     </div>
   );
 }
+
+SupervReports.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

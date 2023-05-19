@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Signature from '../../../public/signature.jpg';
 import { Line } from 'react-chartjs-2';
+import Layout from '../../../components/Layout';
 
 export default function SiteManager() {
   const [userList, setUserList] = useState([]);
@@ -678,3 +679,7 @@ export default function SiteManager() {
     </div>
   );
 }
+
+SiteManager.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

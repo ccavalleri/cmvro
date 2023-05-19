@@ -48,6 +48,12 @@ const Items = [
     noteButton: true,
   },
   {
+    name: 'Vehicles',
+    url: '/user/Vehicles',
+    icon: <TruckIcon className="h-7 w-7" />,
+    noteButton: true,
+  },
+  {
     name: 'Driver License',
     url: '/user/DriverLicense',
     icon: <InboxIcon className="h-7 w-7" />,
@@ -56,7 +62,7 @@ const Items = [
   {
     name: 'Dependents',
     url: '/user/Dependents',
-    icon: <TagIcon className="h-7 w-7" />,
+    icon: <UsersIcon className="h-7 w-7" />,
     noteButton: false,
   },
   {

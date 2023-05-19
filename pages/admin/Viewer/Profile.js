@@ -1,4 +1,5 @@
 import Body from '../../../components/Body';
+import Layout from '../../../components/Layout';
 
 export default function Profile() {
   return (
@@ -8,3 +9,8 @@ export default function Profile() {
     </div>
   );
 }
+
+
+Profile.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

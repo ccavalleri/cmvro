@@ -1,4 +1,5 @@
 import Body from '../../../components/Body';
+import Layout from '../../../components/Layout';
 
 export default function AdvancedReports() {
   return (
@@ -8,3 +9,7 @@ export default function AdvancedReports() {
     </div>
   );
 }
+
+AdvancedReports.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

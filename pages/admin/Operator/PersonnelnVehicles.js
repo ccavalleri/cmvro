@@ -5,6 +5,7 @@ import Inputfield from '../../../components/form/Inputfield';
 import VehicleList from '../../../components/ui/VehicleList';
 import { useState } from 'react';
 import Link from 'next/link';
+import Layout from '../../../components/Layout';
 
 export default function PersonnelnVehicles() {
   const [isActive, setIsActive] = useState(false);
@@ -437,3 +438,7 @@ export default function PersonnelnVehicles() {
     </div>
   );
 }
+
+PersonnelnVehicles.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};
