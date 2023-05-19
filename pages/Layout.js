@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         className="fixed w-full z-30 top-0 text-white bg-sky-700 shadow-lg"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-          <div className="grid grid-cols-1 items-center border-2 border-gray-300 roundedgit"> 
+          <div className="grid grid-cols-1 items-center border-2 border-gray-300 roundedgit">
             <div className="text-xs text-center tracking-wide text-zinc-100 text-center bg-gradient-to-r from-sky-400 to-sky-600 opacity-95 shadow">
               Allied Forces in Italy
             </div>
@@ -111,7 +111,7 @@ export default function Layout({ children }) {
         <svg
           viewBox="0 0 1428 174"
           version="1.1"
-         /* className="bg-gradient-to-r from-cyan-500" */ 
+          /* className="bg-gradient-to-r from-cyan-500" */
           className="bg-gradient-to-t from-sky-500"
         >
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -485,7 +485,7 @@ export default function Layout({ children }) {
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <div>
               <p class="font-semibold text-gray-800 dark:text-white">
-                Quick Link
+                Driving in Italy
               </p>
 
               <div class="flex flex-col items-start mt-5 space-y-2">
@@ -493,26 +493,26 @@ export default function Layout({ children }) {
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Home
+                  Rules of the Road
                 </a>
                 <a
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Who We Are
+                  Gasoline and Oil
                 </a>
                 <a
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Our Philosophy
+                  Speed Limit, Cell Phones and Road Signs
                 </a>
               </div>
             </div>
 
             <div>
               <p class="font-semibold text-gray-800 dark:text-white">
-                Industries
+                Vehicles
               </p>
 
               <div class="flex flex-col items-start mt-5 space-y-2">
@@ -520,26 +520,32 @@ export default function Layout({ children }) {
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Retail & E-Commerce
+                  Purchasing, Selling and Scrapping
                 </a>
                 <a
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Information Technology
+                  Accidents
                 </a>
                 <a
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Finance & Insurance
+                  Motorcycles
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                >
+                  Rentals
                 </a>
               </div>
             </div>
 
             <div>
               <p class="font-semibold text-gray-800 dark:text-white">
-                Services
+                Driver's License
               </p>
 
               <div class="flex flex-col items-start mt-5 space-y-2">
@@ -547,19 +553,13 @@ export default function Layout({ children }) {
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Translation
+                  General Information
                 </a>
                 <a
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  Proofreading & Editing
-                </a>
-                <a
-                  href="#"
-                  class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
-                >
-                  Content Creation
+                  Stricter DUI/SWI laws
                 </a>
               </div>
             </div>
@@ -574,13 +574,13 @@ export default function Layout({ children }) {
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  +880 768 473 4978
+                  Find your closest AFIDMV Office:
                 </a>
                 <a
                   href="#"
                   class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
-                  info@
+                  info@afidmv.mil
                 </a>
               </div>
             </div>
@@ -589,7 +589,9 @@ export default function Layout({ children }) {
           <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
 
           <div class="flex flex-col items-center justify-between sm:flex-row">
-            <a href="#" className='text-slate-600 text-medium font-bold'>AFI DMV</a>
+            <a href="#" className="text-slate-600 text-medium font-bold">
+              AFI DMV
+            </a>
 
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
               © Copyright 2023. All Rights Reserved.
