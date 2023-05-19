@@ -8,6 +8,7 @@ import { AdjustmentsIcon, CalculatorIcon } from '@heroicons/react/outline';
 import InputfieldIcon from '../../../components/form/InputfieldIcon';
 import RadioBox from '../../../components/form/RadioBox';
 import DriverLicenseCard from '../../../components/ui/DriverLicenseCard';
+import Layout from '../../../components/Layout';
 
 export default function DriverLicense() {
   const [ImageExist, setImageExist] = useState(true);
@@ -381,3 +382,7 @@ export default function DriverLicense() {
     </div>
   );
 }
+
+DriverLicense.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};
