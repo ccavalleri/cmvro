@@ -79,7 +79,7 @@ export default function Layout({ children }) {
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
       </nav>
 
-      <div className="pt-24 bg-gradient-to-b from-sky-600">
+      <div className="pt-24 bg-gradient-to-b from-cyan-700 to-cyan-500">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center h-[500px] pb-3 ">
           {/*<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <p className="uppercase tracking-loose w-full">
@@ -98,7 +98,7 @@ export default function Layout({ children }) {
           </div>
 */}
 
-          <Carousel>
+          <Carousel className="mt-3 shadow"> 
             <img src="Napoli.jpg" className="h-fit mt-3" />
           </Carousel>
 
@@ -112,7 +112,7 @@ export default function Layout({ children }) {
           viewBox="0 0 1428 174"
           version="1.1"
           /* className="bg-gradient-to-r from-cyan-500" */
-          className="bg-gradient-to-t from-sky-500"
+          className="bg-gradient-to-t from-cyan-700 to-cyan-500"
         >
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g
@@ -178,8 +178,8 @@ export default function Layout({ children }) {
             </div>
           </div>
           <div className="flex flex-wrap flex-col-reverse sm:flex-row mt-9">
-            <div className="w-full flex sm:w-1/2 p-2 mt-6 justify-end">
-              <img src="landing_page_img_3_4.png" />
+            <div className="w-full flex sm:w-1/2 p-2 mt-6 justify-end  opacity-95">
+              <img src="landing_page_img_3_4.png"  />
             </div>
             <div className="w-full sm:w-1/2 p-6 mt-6">
               <div className="mt-5">
@@ -590,7 +590,7 @@ export default function Layout({ children }) {
 
           <div class="flex flex-col items-center justify-between sm:flex-row">
             <a href="#" className="text-slate-600 text-medium font-bold">
-              AFI DMV
+              Allied Forces in Italy Department of Motor Vehicles (AFI DMV)
             </a>
 
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
