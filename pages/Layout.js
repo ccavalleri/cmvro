@@ -80,7 +80,7 @@ export default function Layout({ children }) {
       </nav>
 
       <div className="pt-24 bg-gradient-to-b from-cyan-700 to-cyan-500">
-        <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center h-[500px] pb-3 ">
+        <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center h-[560px] pb-3 ">
           {/*<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <p className="uppercase tracking-loose w-full">
               What business are you?
@@ -98,7 +98,7 @@ export default function Layout({ children }) {
           </div>
 */}
 
-          <Carousel className="mt-3 shadow"> 
+          <Carousel className="mt-3 shadow-xl border rounded-xl w-full"> 
             <img src="Napoli.jpg" className="h-fit mt-3" />
           </Carousel>
 
