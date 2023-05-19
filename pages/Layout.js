@@ -79,7 +79,7 @@ export default function Layout({ children }) {
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
       </nav>
 
-      <div className="pt-24 bg-gradient-to-r from-cyan-500">
+      <div className="pt-24 bg-gradient-to-b from-sky-600">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center h-[500px] pb-3 ">
           {/*<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <p className="uppercase tracking-loose w-full">
@@ -99,7 +99,7 @@ export default function Layout({ children }) {
 */}
 
           <Carousel>
-            <img src="Napoli.jpg" className="h-fit" />
+            <img src="Napoli.jpg" className="h-fit mt-3" />
           </Carousel>
 
           {/* <div className="w-full md:w-3/5 py-6 text-center">
@@ -111,7 +111,8 @@ export default function Layout({ children }) {
         <svg
           viewBox="0 0 1428 174"
           version="1.1"
-          className="bg-gradient-to-r from-cyan-500"
+         /* className="bg-gradient-to-r from-cyan-500" */ 
+          className="bg-gradient-to-t from-sky-500"
         >
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g
