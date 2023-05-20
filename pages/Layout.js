@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'flowbite-react/lib/cjs/components/Carousel';
 import { UserCircleIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 export default function Layout({ children }) {
   return (
@@ -68,12 +69,10 @@ export default function Layout({ children }) {
               </li>*/}
             </ul>
             <UserCircleIcon className="h-9 w-9 text-white" />
-            <button
-              id="navAction"
-              className="mx-auto lg:mx-0 text-xl text-white font-bold mt-4 lg:mt-0 py-2 px-1 opacity-90 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            <Link href="/user"  className="mx-auto lg:mx-0 text-xl text-white font-bold mt-4 lg:mt-0 py-2 px-1 opacity-90 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
               My AFI DMV
-            </button>
+            </Link>
           </div>
         </div>
         <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
