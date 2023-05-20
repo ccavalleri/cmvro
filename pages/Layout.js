@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'flowbite-react/lib/cjs/components/Carousel';
 import { UserCircleIcon } from '@heroicons/react/solid';
 import Link from 'next/link';
+import LogoImg from '../components/ui/LogoImg';
 
 export default function Layout({ children }) {
   return (
@@ -11,27 +12,7 @@ export default function Layout({ children }) {
         className="fixed w-full z-30 top-0 text-white bg-sky-700 shadow-lg"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-          <div className="grid grid-cols-1 items-center border-2 border-gray-300 roundedgit">
-            <div className="text-xs text-center tracking-wide text-zinc-100 text-center bg-gradient-to-r from-sky-400 to-sky-600 opacity-95 shadow">
-              Allied Forces in Italy
-            </div>
-            <div className="border border-sky-600 text-center bg-gradient-to-b from-sky-500 to-sky-700">
-              <a
-                className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-sky-100 leading-tight drop-shadow-xl"
-                href="#"
-              >
-                AFI <span className="text-blue-100">DMV</span>
-                {/* C<span className="text-2xl text-white">entral</span> M
-              <span className="text-2xl text-white">otor</span> V
-              <span className="text-2xl text-white">ehicle</span> R
-              <span className="text-2xl text-white">egistration</span> O
-  <span className="text-2xl text-white">ffice</span> */}
-              </a>
-            </div>
-            <div className="text-xs text-center text-zinc-100  bg-gradient-to-l from-sky-500 to-sky-600 px-1 tracking-wide  opacity-95 shadow">
-              Department of Motor Vehicles
-            </div>
-          </div>
+           <LogoImg/>
           <div className="block lg:hidden pr-4">
             <button
               id="nav-toggle"
@@ -69,7 +50,9 @@ export default function Layout({ children }) {
               </li>*/}
             </ul>
             <UserCircleIcon className="h-9 w-9 text-white" />
-            <Link href="/user"  className="mx-auto lg:mx-0 text-xl text-white font-bold mt-4 lg:mt-0 py-2 px-1 opacity-90 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            <Link
+              href="/user"
+              className="mx-auto lg:mx-0 text-xl text-white font-bold mt-4 lg:mt-0 py-2 px-1 opacity-90 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
               My AFI DMV
             </Link>
