@@ -3,7 +3,7 @@ import Layout from '../Layout';
 export default function LogoImg() {
   return (
     <div className="grid grid-cols-1">
-      <img src="logo.png"/>
+      <img src="logo3.png"/>
     </div>
   );
 }
