@@ -9,5 +9,5 @@ export default function LogoImg() {
 }
 
 LogoImg.getLayout = function (page) {
-  return <Layout>{page}</Layout>;
+  return <Layout>{page} </Layout>;
 };
