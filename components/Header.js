@@ -31,7 +31,7 @@ export default function Header() {
             <p className="flex items-center text-xl w-sidebar mr-4 hover:no-underline">
               <span className="mr-1 -mt-1 text-primary"></span>
               <span className="text-4xl text-blue-800 rounded-lg border px-2 py-1">
-                <strong>AFI DMV</strong>
+                <strong>AFI DMV </strong>
               </span>
             </p>
           </div>
