@@ -45,7 +45,7 @@ export default function Header() {
                   type="text"
                   className="flex-grow focus:outline-none"
                 />
-                <AdjustmentsIcon className="h-6 text-gray-700 ml-3 mr-3" />
+                <AdjustmentsIcon className="h-6 text-gray-700 ml-3 mr-3"  />
               </div>
               <button
                 type="submit"
