@@ -12,7 +12,7 @@ export default function Layout({ children }) {
         className="fixed w-full z-30 top-0 text-white bg-sky-700 shadow-lg"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-           <LogoImg/>
+          <LogoImg />
           <div className="block lg:hidden pr-4">
             <button
               id="nav-toggle"
@@ -129,7 +129,7 @@ export default function Layout({ children }) {
       <section className="bg-white border-b py-8">
         <div className="container max-w-5xl mx-auto m-8">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-blue-800 shadow-xl rounded-xl py-3">
-            Go Tech, complete the most online!
+            Go Tech! complete the most online!
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
